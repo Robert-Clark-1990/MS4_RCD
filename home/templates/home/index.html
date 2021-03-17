@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
     <div class="container h-100">
         <div class="row h-100">
@@ -9,12 +18,14 @@
                 <br>
                 <h3>From logos to family portraits, book covers to websites, I will turn your vision into a reality</h3>
                 <br>
-                <h3>
-                    <a href="" class="btn btn-lg rounded-0">Get a free quote today</a>
-                </h3>
+                <div class="my-5">
+                    <h3>
+                        <a href="" class="btn btn-lg rounded-0">Get a free quote today</a>
+                    </h3>
+                </div>
             </div>
             <div class="col-5 col-md-6 my-auto">
-                <img src="" alt="Robert Clark Design">
+                <img src="{{ MEDIA_URL }}rcd_profile.png" alt="Robert Clark Design">
             </div>
         </div>
     </div>

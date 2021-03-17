@@ -1,51 +1,110 @@
 <!doctype html>
 {% load static %}
 
-<html lang="en">
-  <head>
+    <html lang="en">
 
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+    <head>
 
-    {% block extrameta %}
-    {% endblock %}
+        {% block meta %}
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% endblock %}
 
-    {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    {% endblock %}
+        {% block extrameta %}
+        {% endblock %}
 
-    {% block extracss %}
-    {% endblock %}
+        {% block corecss %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap">
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% endblock %}
 
-    {% block corejs %}
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    {% endblock %}
+        {% block extracss %}
+        {% endblock %}
 
-    {% block extrajs %}
-    {% endblock %}
+        {% block corejs %}
+            <script src="https://kit.fontawesome.com/f9243baddd.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+        {% endblock %}
 
-    <title>Robert Clark Design {% block extratitle %}{% endblock %}</title>
-  </head>
-  <body>
-      <header class="container-fluid fixed-top"></header>
+        {% block extrajs %}
+        {% endblock %}
 
-      {% if messages %}
-        <div class="message-container"></div>
-      {% endif %}
+        <title>Robert Clark Design {% block extratitle %}{% endblock %}</title>
 
-      {% block page_header %}
-      {% endblock %}
+    </head>
 
-      {% block content %}
-      {% endblock %}
+    <body>
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-left">
+                    <ul class="list-inline list-unstyled text-left my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="nav-link black-text" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="icon">
+                                    <i class="fas fa-bars fa-lg"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="" class="dropdown-item">Admin Management</a>
+                                    {% endif %}
+                                    <a href="" class="dropdown-item">My Account</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Log Out</a>
+                                    <hr>
+                                {% else %}
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Log In</a>
+                                    <hr>
+                                {% endif %}
+                                <a href="" class="dropdown-item">Portfolio</a>
+                                <a href="" class="dropdown-item">Testimonials</a>
+                                <a href="" class="dropdown-item">Store</a>
+                                <a href="" class="dropdown-item">Contact</a>
+                                <a href="" class="dropdown-item">Shopping Bag</a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item"></li>
+                    </ul>   
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <img src="{{ MEDIA_URL }}RCD_logo.png" alt="RCD logo">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-right">
+                    <a class="black-text nav-link" href="">
+                        <div class="icon">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-    {% block postloadjs %}
-    {% endblock %}
-    
-  </body>
-</html>
+        {% if messages %}
+            <div class="message-container"></div>
+        {% endif %}
+
+        {% block page_header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block postloadjs %}
+        {% endblock %}
+
+    </body>
+
+    </html>
