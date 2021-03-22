@@ -1,0 +1,184 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000001",
+            "name": "Scarborough Castle",
+            "description": "Scarborough Castle and the South Bay, as seen from above. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000001"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000002",
+            "name": "Scarborough Chalets - Colour",
+            "description": "The beautiful chalets of Scarborough North Bay beach. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000002"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000003",
+            "name": "Scarborough Chalets - Noir",
+            "description": "The beautiful chalets of Scarborough North Bay beach, this time contrasted with stunning use of black, white and grey. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000003"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000004",
+            "name": "Scarborough South Bay",
+            "description": "Scarborough South Bay recreated in stunning geometric style. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000004"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000005",
+            "name": "Scarborough Sunset",
+            "description": "A vibrant sun setting over Scarborough's South Bay. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000005"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000006",
+            "name": "Scarborough North Bay",
+            "description": "The grand beachfront, streching from the beautiful chalets, down to the castle. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000006"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000007",
+            "name": "Whitby Harbour",
+            "description": "The famous Whitby harbour like you've never seen it before. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000007"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000008",
+            "name": "Whitby Abbey",
+            "description": "The majestic Whitby Abbey set to a resplendent purple sky. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000008"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000009",
+            "name": "Bamburgh Castle",
+            "description": "Dawn rises on the magnificent Bamburgh Castle. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000009"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000010",
+            "name": "Steam Train",
+            "description": "A beautiful steam train passes over a viaduct. Available in small, medium or large.",
+            "price_1": 12.00,
+            "price_2": 20.00,
+            "price_3": 50.00,
+            "category": 1,
+            "image": "rc000010"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000011",
+            "name": "Custom Design - Small",
+            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
+            "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
+            "price_1": 50.00,
+            "price_2": 80.00,
+            "category": 2,
+            "image": "rc000011"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000012",
+            "name": "Custom Design - Medium",
+            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
+            "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
+            "price_1": 100.00,
+            "price_2": 130.00,
+            "category": 2,
+            "image": "rc000012"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000013",
+            "name": "Custom Design - Large",
+            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
+            "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
+            "price_1": 300.00,
+            "price_2": 330.00,
+            "category": 2,
+            "image": "rc000013"
+        }
+    }
+]
