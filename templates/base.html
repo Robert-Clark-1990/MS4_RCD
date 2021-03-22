@@ -48,8 +48,8 @@
     <body>
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row d-print-inline-flex">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-left">
-                    <ul class="list-inline list-unstyled text-left my-0">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                    <ul class="list-inline list-unstyled text-center my-0">
                         <li class="list-inline-item dropdown">
                             <a class="nav-link black-text" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="icon">
@@ -80,10 +80,10 @@
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <img src="{{ MEDIA_URL }}RCD_logo.png" alt="RCD logo">
+                        <img src="{{ MEDIA_URL }}RCD_logo.png" alt="RCD logo" width="64" height="64">
                     </a>
                 </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-right">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
                     <a class="black-text nav-link" href="">
                         <div class="icon">
                             <i class="fas fa-shopping-cart fa-lg"></i>
@@ -102,6 +102,32 @@
 
         {% block content %}
         {% endblock %}
+
+        <footer class="container-fluid fixed-bottom">
+            <div id="bottomnav" class="row d-print-inline-flex">
+                <div class="col text-center">
+                    <a class="black-text nav-link" href="https://www.facebook.com/robertclarkdesign" target="_blank">
+                        <div class="icon">
+                            <i class="fab fa-facebook-square fa-lg"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a class="black-text nav-link" href="https://www.instagram.com/robertclarkdesign/" target="_blank">
+                        <div class="icon">
+                            <i class="fab fa-instagram-square fa-lg"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a class="black-text nav-link" href="">
+                        <div class="icon">
+                            <i class="fas fa-envelope-square fa-lg"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </footer>
 
         {% block postloadjs %}
         {% endblock %}

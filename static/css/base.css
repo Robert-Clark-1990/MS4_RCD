@@ -3,12 +3,12 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
+    height: calc(100vh - 100px);
     background-color: #faf8f0;
 }
 
 .header-container {
-    padding-top: 164px;
+    padding-top: 100px;
     background-color: #faf8f0;
 }
 
@@ -30,6 +30,11 @@ p {
     background-color: #faf8f0;
 }
 
+.dropdown-item:hover {
+    color: white;
+    background-color: #9c020e;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -38,6 +43,19 @@ p {
     height: 1.5rem;
     width: 1.5rem;
 }
+
+.icon:hover {
+    color: #9c020e;
+}
+
+#topnav {
+    background-color: #faf8f0;
+}
+
+#bottomnav {
+    background-color: #faf8f0;
+}
+
 
 /* ----------------------------------------------------- Index Page */
 
@@ -49,7 +67,8 @@ p {
 .free-quote-button:active,
 .free-quote-button:focus {
     font-size: 400;
-    color: #9c020e;
+    color: white;
+    background-color: #9c020e;
 }
 
 /* ----------------------------------------------------- Media Queries */
@@ -67,5 +86,9 @@ p {
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+
+    .page-image {
+        width: 500px;
     }
 }
