@@ -10,7 +10,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000001"
+            "image": "rc000001.png"
         }
     },
     {
@@ -24,7 +24,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000002"
+            "image": "rc000002.png"
         }
     },
     {
@@ -38,7 +38,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000003"
+            "image": "rc000003.png"
         }
     },
     {
@@ -52,7 +52,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000004"
+            "image": "rc000004.png"
         }
     },
     {
@@ -66,7 +66,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000005"
+            "image": "rc000005.png"
         }
     },
     {
@@ -80,7 +80,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000006"
+            "image": "rc000006.png"
         }
     },
     {
@@ -94,7 +94,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000007"
+            "image": "rc000007.png"
         }
     },
     {
@@ -108,7 +108,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000008"
+            "image": "rc000008.png"
         }
     },
     {
@@ -122,7 +122,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000009"
+            "image": "rc000009.png"
         }
     },
     {
@@ -136,7 +136,7 @@
             "price_2": 20.00,
             "price_3": 50.00,
             "category": 1,
-            "image": "rc000010"
+            "image": "rc000010.png"
         }
     },
     {
@@ -150,7 +150,7 @@
             "price_1": 50.00,
             "price_2": 80.00,
             "category": 2,
-            "image": "rc000011"
+            "image": "rc000011.png"
         }
     },
     {
@@ -164,7 +164,7 @@
             "price_1": 100.00,
             "price_2": 130.00,
             "category": 2,
-            "image": "rc000012"
+            "image": "rc000012.png"
         }
     },
     {
@@ -178,7 +178,202 @@
             "price_1": 300.00,
             "price_2": 330.00,
             "category": 2,
-            "image": "rc000013"
+            "image": "rc000013.png"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000014",
+            "name": "Tiger Print",
+            "description": "A beautiful tiger. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000014.png"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000015",
+            "name": "Wolf Print",
+            "description": "A beautiful wolf. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000015.png"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000016",
+            "name": "Golden Retriever Print",
+            "description": "A beautiful Golden Retriever. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000016.png"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000017",
+            "name": "Parrot Print",
+            "description": "A beautiful Parrot. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000017.png"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000018",
+            "name": "Owl Print",
+            "description": "A beautiful Owl. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000018.png"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000019",
+            "name": "Lion Print",
+            "description": "A beautiful Lion. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000019.png"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000020",
+            "name": "Huskey Print",
+            "description": "A beautiful Huskey. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000020.png"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000021",
+            "name": "Hare Print",
+            "description": "A beautiful Hare. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000021.png"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000022",
+            "name": "Fox Print",
+            "description": "A beautiful Fox. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000022.png"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000023",
+            "name": "Donkey Print",
+            "description": "A beautiful Donkey. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000023.png"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000024",
+            "name": "Deer Print",
+            "description": "A beautiful Deer. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000024.png"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000025",
+            "name": "Bear Print",
+            "description": "A beautiful Bear. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000025.png"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000026",
+            "name": "Flamingo Print",
+            "description": "A beautiful Famingo wearing a top hat, as to be expected. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000026.png"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000027",
+            "name": "Hummingbird Print",
+            "description": "A beautiful Hummingbird. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000027.png"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "rc000028",
+            "name": "Elephant Print",
+            "description": "A beautiful Elephant. Available in small or medium.",
+            "price_1": 8.00,
+            "price_2": 15.00,
+            "category": 3,
+            "image": "rc000028.png"
         }
     }
 ]
