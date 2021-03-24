@@ -278,6 +278,8 @@ share work upon completion.
 
 ### Code
 
+- [Image Modal](https://www.w3schools.com/css/tryit.asp?filename=trycss_image_modal_js) thanks to W3Schools.
+
 ### Acknowledgements
 
 - Thanks to **Precious Ijege** for his continued assistance as mentor.
