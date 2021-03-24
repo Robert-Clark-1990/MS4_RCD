@@ -61,6 +61,18 @@ p {
         max-height: 80vw;
     }
 
+.product-link {
+    color: black;
+}
+
+.product-link:hover {
+    color: #9c020e;
+    text-decoration: none;
+}
+
+.hidden-line-break {
+    opacity: 0;
+}
 
 /* ----------------------------------------------------- Index Page */
 
@@ -95,5 +107,13 @@ p {
 
     .page-image {
         max-width: 500px;
+    }
+
+    .header-container {
+        padding-top: 100px;
+    }
+
+    body {
+        height: calc(100vh - 100px);
     }
 }
