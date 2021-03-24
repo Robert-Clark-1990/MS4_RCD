@@ -56,6 +56,11 @@ p {
     background-color: #faf8f0;
 }
 
+.page-image {
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+
 
 /* ----------------------------------------------------- Index Page */
 
@@ -89,6 +94,6 @@ p {
     }
 
     .page-image {
-        width: 500px;
+        max-width: 500px;
     }
 }
