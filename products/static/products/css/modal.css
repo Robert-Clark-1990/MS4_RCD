@@ -21,16 +21,17 @@
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-#img01, .modal-content {
-    position: fixed;
+.modal-content img{
+    position: relative;
     top: 100px;
-    right: 50px;
-    display: flex;
-    -ms-flex-direction: column;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-height: 80vh;
     flex-direction: column;
-    width: 90%;
     pointer-events: auto;
-    background-color: #fff;
+    background-color: rgba(0,0,0,.5);
     background-clip: padding-box;
     border: 1px solid rgba(0,0,0,.2);
     border-radius: .3rem;

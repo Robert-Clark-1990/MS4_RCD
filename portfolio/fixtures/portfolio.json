@@ -1,0 +1,155 @@
+[
+    {
+        "pk": 1,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000001",
+            "name": "The Wilf Ward Family Trust",
+            "para_1": "In an effort to bring unity to an organisation that had acted fairly independently all across Yorkshire, a brand restructure was implemented.",
+            "para_2": "This required the recreation of effective brand guidelines, including fun droplet characters that would bridge the gap between supported individuals and their support workers.",
+            "para_3": "A greater focus on their Yorkshire roots was important to the team, so a new marketing strategy was created that promoted this.",
+            "link": "https://wilfward.org.uk/",
+            "keywords": "Branding, Marketing, Graphic Design, Web Design",
+            "image": "pf000001.png"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000002",
+            "name": "Tim and Tom on the Radio",
+            "para_1": "Hosts of local Scarborough radio show “Tim & Tom on the Radio” wanted to branch out into a limited range of merchandise, including t-shirts and mugs that could be given out as competition prizes on their show.",
+            "para_2": "A reversable design that harked back to their love of playing cards was decided upon.",
+            "keywords": "Branding, Graphic Design",
+            "image": "pf000002.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000003",
+            "name": "North of the Wall",
+            "para_1": "Ahead of the release of their first album, popular indie band “North of the Wall” required a striking logo and album artwork.",
+            "para_2": "Fans of the geometric art style, the band settled on a repurposed promotional photo, which was used in all other material required for their launch.",
+            "keywords": "Branding, Marketing, Graphic Design",
+            "image": "pf000003.png"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000004",
+            "name": "Tea with the Morale Queen",
+            "para_1": "Up and coming Stand up Comedian, Milly Armstrong-Clark brings the laughs on stage, and in her weekly podcast, “Tea With The Morale Queen.”",
+            "para_2": "Milly wanted a brand that stood out while holding onto her quirky, tea-loving aesthetic. Designs for her podcast and stand up shows were created, along with a personal website.",
+            "link": "",
+            "keywords": "Branding, Graphic Design, Web Design",
+            "image": "pf000004.png"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000005",
+            "name": "Confidence for Breakfast",
+            "para_1": "Comedian Mel Judson branched out into the world of podcasting with her debut show, “Confidence for Breakfast.”",
+            "para_2": "For this project, she required a logo and brand styling that could be used across her marketing strategies that portrayed a strong and confident message. ",
+            "keywords": "Branding, Graphic Design",
+            "image": "pf000005.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000006",
+            "name": "Coastcall Independent Living Team",
+            "para_1": "In an effort to increase understanding of the service and increase service users, a soft reboot of the brand was implemented.",
+            "para_2": "This covered everything from leaflet and brochure creation to social media and website launch.",
+            "para_3": "Market research was carried out, and a customer survey was conducted to see where areas of the service promotion could be improved.",
+            "keywords": "Branding, Marketing, Graphic Design, Web Design",
+            "image": "pf000006.png"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000007",
+            "name": "The Beach Hut Beer",
+            "para_1": "As part of an expansion into the hospitality industry, local community cleanup project The Beach wanted a comemorative beer bottle created.",
+            "para_2": "This project was created in conjunction with famed theatre, the Stephen Joseph Theatre, with whom the beverage would be served at.",
+            "para_3": "The Beach Hut Beer would celebrate the beloved Scarborough chalets, while also mimicking the style of other craft beers sold in the theatre.",
+            "keywords": "Graphic Design",
+            "image": "pf000007.png"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000008",
+            "name": "Eye of the Beholder",
+            "para_1": "Starting life as a concept piece for North of the Wall’s followup album, this piece of art transformed into a design with its own unique story.",
+            "para_2": "Prints of this design have sold all around the world, and have formed the basis for tattoos.",
+            "keywords": "Graphic Design",
+            "image": "pf000008.png"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000009",
+            "name": "The James Stone Thriller Series",
+            "para_1": "In his spare time, Rob is a Self-Published Author with 10 books to his name, each receiving 5-star reviews on Amazon.",
+            "para_2": "For these books, he undertook extensive research on necessary subjects, and on marketing opposition, critically reviewed and edited his work, created market-ready covers that matched industry standards, built an author website, and developed detailed marketing strategies.",
+            "para_3": "Each of these projects required self-discipline, evaluation, and patience in order to meet the high standards he sets for himself.",
+            "keywords": "Branding, Marketing, Graphic Design, Web Design",
+            "link": "http://robertclarkauthor.com/",
+            "image": "pf000009.png"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000010",
+            "name": "Geometric  Panorama Prints",
+            "para_1": "Starting off as a passion project, these geometric panoramic designs quickly took on a life of their own as intrest soared.",
+            "para_2": "Taking upwards of 40 hours per piece, these designs have been sold across Yorkshire at fares and markets, and a renowned art gallery in Whitby.",
+            "para_3": "Prints can now be purchased through the RCD store",
+            "keywords": "Graphic Design",
+            "image": "pf000010.png"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000011",
+            "name": "Geometric Animal Prints",
+            "para_1": "Expanding upon the geometric panoramas, a range of animal head designs were created. These sold primarily on postcards and t-shirts, and have been bought by customers all across the world.",
+            "para_2": "Prints can now be purchased through the RCD store",
+            "keywords": "Graphic Design",
+            "image": "pf000011.png"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "portfolio.project",
+        "fields": {
+            "sku": "pf000012",
+            "name": "Geometric Commissions",
+            "para_1": "This stunning art style has proved highly popular with customers looking to turn their treasured memories into works of art.",
+            "para_2": "From portaits of beloved animals to wedding gifts, there is no image that would not suit the geometric style.",
+            "para_3": "Commissions can be purchased through the RCD store",
+            "keywords": "Graphic Design",
+            "image": "pf000012.png"
+        }
+    }
+]
