@@ -17,6 +17,7 @@ def all_products(request):
 
     context = {
         'products': products,
+        'current_categories': categories,
     }
 
     return render(request, 'products/products.html', context)
@@ -29,7 +30,6 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'current_categories': categories,
     }
 
     return render(request, 'products/product_detail.html', context)
