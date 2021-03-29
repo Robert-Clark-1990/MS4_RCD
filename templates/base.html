@@ -71,7 +71,7 @@
                                 <a href="{% url 'portfolio' %}" class="dropdown-item">Portfolio</a>
                                 <a href="" class="dropdown-item">Testimonials</a>
                                 <a href="{% url 'products' %}" class="dropdown-item">Shop</a>
-                                <a href="" class="dropdown-item">Contact</a>
+                                <a href="{% url 'contact' %}" class="dropdown-item">Contact</a>
                                 <a href="" class="dropdown-item">Shopping Bag</a>
                             </div>
                         </li>
@@ -120,7 +120,7 @@
                     </a>
                 </div>
                 <div class="col text-center">
-                    <a class="black-text nav-link" href="">
+                    <a class="black-text nav-link" href="{% url 'contact' %}">
                         <div class="icon">
                             <i class="fas fa-envelope-square fa-lg"></i>
                         </div>
