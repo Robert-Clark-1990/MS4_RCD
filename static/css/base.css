@@ -81,6 +81,18 @@ p {
     opacity: 0;
 }
 
+.form-button {
+    background-color: #1f1c1c;
+    color: white;
+}
+
+.form-button:hover,
+.form-button:active,
+.form-button:focus {
+    background-color: #9c020e;
+    color: white;
+}
+
 /* ----------------------------------------------------- Index Page */
 
 .free-quote-button {

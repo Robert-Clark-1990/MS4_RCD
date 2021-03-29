@@ -19,6 +19,22 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-12 my-auto py-1 d-flex justify-content-center">
+                <form method="GET" action="{% url 'portfolio' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control rounded-pill border-1" type="text" name="q" placeholder="Search the Portfolio">
+                        <div class="input-group-append">
+                            <button class="form-control rounded-circle btn form-button ml-2" type="submit">
+                                <span>
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
