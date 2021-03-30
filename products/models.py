@@ -19,11 +19,8 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     t_and_c = models.TextField(null=True, blank=True)
-    price_1 = models.DecimalField(max_digits=6, decimal_places=2)
-    price_2 = models.DecimalField(max_digits=6, decimal_places=2,
-                                  null=True, blank=True)
-    price_3 = models.DecimalField(max_digits=6, decimal_places=2,
-                                  null=True, blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    is_digital = models.BooleanField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

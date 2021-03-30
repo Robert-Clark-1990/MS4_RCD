@@ -5,11 +5,10 @@
         "fields": {
             "sku": "rc000001",
             "name": "Scarborough Castle",
-            "description": "Scarborough Castle and the South Bay, as seen from above. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "Scarborough Castle and the South Bay, as seen from above, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000001.png"
         }
     },
@@ -19,11 +18,10 @@
         "fields": {
             "sku": "rc000002",
             "name": "Scarborough Chalets - Colour",
-            "description": "The beautiful chalets of Scarborough North Bay beach. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "The beautiful chalets of Scarborough North Bay beach, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000002.png"
         }
     },
@@ -33,11 +31,10 @@
         "fields": {
             "sku": "rc000003",
             "name": "Scarborough Chalets - Noir",
-            "description": "The beautiful chalets of Scarborough North Bay beach, this time contrasted with stunning use of black, white and grey. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "The beautiful chalets of Scarborough North Bay beach, this time contrasted with use of black, white and grey, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000003.png"
         }
     },
@@ -47,11 +44,10 @@
         "fields": {
             "sku": "rc000004",
             "name": "Scarborough South Bay",
-            "description": "Scarborough South Bay recreated in stunning geometric style. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "Scarborough South Bay recreated in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000004.png"
         }
     },
@@ -61,11 +57,10 @@
         "fields": {
             "sku": "rc000005",
             "name": "Scarborough Sunset",
-            "description": "A vibrant sun setting over Scarborough's South Bay. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "A vibrant sun setting over Scarborough's South Bay, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000005.png"
         }
     },
@@ -75,11 +70,10 @@
         "fields": {
             "sku": "rc000006",
             "name": "Scarborough North Bay",
-            "description": "The grand beachfront, streching from the beautiful chalets, down to the castle. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "The grand beachfront, streching from the beautiful chalets, down to the castle, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000006.png"
         }
     },
@@ -89,11 +83,10 @@
         "fields": {
             "sku": "rc000007",
             "name": "Whitby Harbour",
-            "description": "The famous Whitby harbour like you've never seen it before. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "The famous Whitby harbour like you've never seen it before, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000007.png"
         }
     },
@@ -103,11 +96,10 @@
         "fields": {
             "sku": "rc000008",
             "name": "Whitby Abbey",
-            "description": "The majestic Whitby Abbey set to a resplendent purple sky. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "The majestic Whitby Abbey set to a resplendent purple sky, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000008.png"
         }
     },
@@ -117,11 +109,10 @@
         "fields": {
             "sku": "rc000009",
             "name": "Bamburgh Castle",
-            "description": "Dawn rises on the magnificent Bamburgh Castle. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "Dawn rises on the magnificent Bamburgh Castle, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000009.png"
         }
     },
@@ -131,11 +122,10 @@
         "fields": {
             "sku": "rc000010",
             "name": "Steam Train",
-            "description": "A beautiful steam train passes over a viaduct. Available in small, medium or large.",
-            "price_1": 12.00,
-            "price_2": 20.00,
-            "price_3": 50.00,
+            "description": "A beautiful steam train passes over a viaduct, created in stunning geometric style.",
+            "price": 50.00,
             "category": 1,
+            "is_digital":false,
             "image": "rc000010.png"
         }
     },
@@ -147,9 +137,9 @@
             "name": "Custom Design - Small",
             "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
             "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
-            "price_1": 50.00,
-            "price_2": 80.00,
+            "price":  50.00,
             "category": 2,
+            "is_digital":true,
             "image": "rc000011.png"
         }
     },
@@ -161,9 +151,9 @@
             "name": "Custom Design - Medium",
             "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
             "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
-            "price_1": 100.00,
-            "price_2": 130.00,
+            "price": 150.00,
             "category": 2,
+            "is_digital":true,
             "image": "rc000012.png"
         }
     },
@@ -175,9 +165,9 @@
             "name": "Custom Design - Large",
             "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
             "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
-            "price_1": 300.00,
-            "price_2": 330.00,
+            "price": 300.00,
             "category": 2,
+            "is_digital":true,
             "image": "rc000013.png"
         }
     },
@@ -187,10 +177,10 @@
         "fields": {
             "sku": "rc000014",
             "name": "Tiger Print",
-            "description": "A beautiful tiger. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful tiger created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000014.png"
         }
     },
@@ -200,10 +190,10 @@
         "fields": {
             "sku": "rc000015",
             "name": "Wolf Print",
-            "description": "A beautiful wolf. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful wolf created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000015.png"
         }
     },
@@ -213,10 +203,10 @@
         "fields": {
             "sku": "rc000016",
             "name": "Golden Retriever Print",
-            "description": "A beautiful Golden Retriever. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Golden Retriever created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000016.png"
         }
     },
@@ -226,10 +216,10 @@
         "fields": {
             "sku": "rc000017",
             "name": "Parrot Print",
-            "description": "A beautiful Parrot. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Parrot created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000017.png"
         }
     },
@@ -239,10 +229,10 @@
         "fields": {
             "sku": "rc000018",
             "name": "Owl Print",
-            "description": "A beautiful Owl. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Owl created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000018.png"
         }
     },
@@ -252,10 +242,10 @@
         "fields": {
             "sku": "rc000019",
             "name": "Lion Print",
-            "description": "A beautiful Lion. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Lion created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000019.png"
         }
     },
@@ -265,10 +255,10 @@
         "fields": {
             "sku": "rc000020",
             "name": "Huskey Print",
-            "description": "A beautiful Huskey. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Huskey created in stunning geometric style..",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000020.png"
         }
     },
@@ -278,10 +268,10 @@
         "fields": {
             "sku": "rc000021",
             "name": "Hare Print",
-            "description": "A beautiful Hare. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Hare created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000021.png"
         }
     },
@@ -291,10 +281,10 @@
         "fields": {
             "sku": "rc000022",
             "name": "Fox Print",
-            "description": "A beautiful Fox. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Fox created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000022.png"
         }
     },
@@ -304,10 +294,10 @@
         "fields": {
             "sku": "rc000023",
             "name": "Donkey Print",
-            "description": "A beautiful Donkey. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Donkey created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000023.png"
         }
     },
@@ -317,10 +307,10 @@
         "fields": {
             "sku": "rc000024",
             "name": "Deer Print",
-            "description": "A beautiful Deer. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Deer created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000024.png"
         }
     },
@@ -330,10 +320,10 @@
         "fields": {
             "sku": "rc000025",
             "name": "Bear Print",
-            "description": "A beautiful Bear. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Bear created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000025.png"
         }
     },
@@ -343,10 +333,10 @@
         "fields": {
             "sku": "rc000026",
             "name": "Flamingo Print",
-            "description": "A beautiful Famingo wearing a top hat, as to be expected. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Famingo wearing a top hat, as to be expected, created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000026.png"
         }
     },
@@ -356,10 +346,10 @@
         "fields": {
             "sku": "rc000027",
             "name": "Hummingbird Print",
-            "description": "A beautiful Hummingbird. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Hummingbird created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000027.png"
         }
     },
@@ -369,10 +359,10 @@
         "fields": {
             "sku": "rc000028",
             "name": "Elephant Print",
-            "description": "A beautiful Elephant. Available in small or medium.",
-            "price_1": 8.00,
-            "price_2": 15.00,
+            "description": "A beautiful Elephant created in stunning geometric style.",
+            "price": 15.00,
             "category": 3,
+            "is_digital":false,
             "image": "rc000028.png"
         }
     }
