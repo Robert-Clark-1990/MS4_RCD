@@ -72,7 +72,7 @@
                                 <a href="" class="dropdown-item">Testimonials</a>
                                 <a href="{% url 'products' %}" class="dropdown-item">Shop</a>
                                 <a href="{% url 'contact' %}" class="dropdown-item">Contact</a>
-                                <a href="" class="dropdown-item">Shopping Bag</a>
+                                <a href="{% url 'view_bag' %}" class="dropdown-item">Shopping Bag</a>
                             </div>
                         </li>
                         <li class="list-inline-item"></li>
@@ -84,7 +84,7 @@
                     </a>
                 </div>
                 <div class="col-4 my-auto py-1 py-lg-0 text-center">
-                    <a class="black-text nav-link" href="">
+                    <a class="black-text nav-link" href="{% url 'view_bag' %}">
                         <div class="icon">
                             <i class="fas fa-shopping-cart fa-lg"></i>
                         </div>
