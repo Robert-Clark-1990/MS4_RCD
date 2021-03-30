@@ -93,6 +93,14 @@ p {
     color: white;
 }
 
+#delivery-banner {
+    background-color: #9c020e;
+}
+
+#delivery-banner-text {
+    color: white;
+}
+
 /* ----------------------------------------------------- Index Page */
 
 .free-quote-button {

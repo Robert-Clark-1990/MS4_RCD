@@ -11,18 +11,23 @@
             <div class="col">
             </div>
         </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col">
+                <h4 id="delivery-banner-text" class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
+            </div>            
+        </div>
     </div>
 {% endblock %}
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row h-100">
+        <div class="row h-100 pt-5">
             <div class="col-6 offset-3">
-                <a href="{% url 'products' %}" class="btn rounded-0">
+                <a href="{% url 'products' %}" class="btn form-button">
                     <span class="icon">
-                        <i class="fas fa-caret-square-left"></i>
+                        <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Back</span>
+                    <span>Back</span>
                 </a>
             </div>
             <div class="col-8 offset-2 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
