@@ -135,9 +135,9 @@
         "fields": {
             "sku": "rc000011",
             "name": "Custom Design - Small",
-            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
+            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. The finished product will be presented as a digital file.",
             "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
-            "price":  50.00,
+            "price":  75.00,
             "category": 2,
             "is_digital":true,
             "image": "rc000011.png"
@@ -149,7 +149,7 @@
         "fields": {
             "sku": "rc000012",
             "name": "Custom Design - Medium",
-            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
+            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. The finished product will be presented as a digital file.",
             "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
             "price": 150.00,
             "category": 2,
@@ -163,7 +163,7 @@
         "fields": {
             "sku": "rc000013",
             "name": "Custom Design - Large",
-            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. Available as a digital file or physical print.",
+            "description": "Would you like to immortalise a treasured memory in this unique art style? Then this is the option for you. Simply upload a maximum of 5 images that you would like to be turned into a single piece of artwork. The finished product will be presented as a digital file.",
             "t_and_c": "Please note, only one piece of artwork will be completed. Uploaded images are for reference only. If you wish to commission multiple works of art, please use the quantity toggle to add extra commissions, and use the comments box on the checkout page to indicate your request.",
             "price": 300.00,
             "category": 2,

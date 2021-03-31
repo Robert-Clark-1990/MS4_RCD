@@ -66,9 +66,9 @@ p {
 }
 
 .page-image {
-        max-width: 80vw;
-        max-height: 80vw;
-    }
+    max-width: 80vw;
+    max-height: 80vw;
+}
 
 .product-link {
     color: black;
