@@ -102,6 +102,11 @@ p {
     color: white;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* ----------------------------------------------------- Index Page */
 
 .free-quote-button {
