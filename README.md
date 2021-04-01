@@ -71,12 +71,12 @@ be able to either accept or request a round of changes. Once the customer has ac
 | 01  | Site User    | Quickly and easily understand the purpose of the site                                           |
 | 02  | Site User    | View a list of products & services available                                                    |
 | 03  | Site User    | View individual products & services                                                             |
-| 04  | Site User    | Sort and search for products & services that fit my needs                                       |
+| 04  | Site User    | Sort for products & services that fit my requirements                                           |
 | 05  | Site User    | Select products & services I want and add them to my basket                                     |
 | 06  | Site User    | Easily view the total cost of my purchases at any time                                          |
-| 07  | Site User    | Order prepackaged services such as logo design and receive an automated quote                   |
-| 08  | Site User    | Add additional information to inform designer on project requirements before payment            |
-| 09  | Site User    | Easily locate an inbuilt contact form to request quotes on unique commissions                   |
+| 07  | Site User    | Order prepackaged services such as commissioned artwork and receive an automated quote          |
+| 08  | Site User    | Add additional information to inform designer on project requirements                           |
+| 09  | Site User    | Easily locate an inbuilt contact form to request quotes on unique projects                      |
 | 10  | Site User    | Pay for services via an inbuilt payment service                                                 |
 | 11  | Site User    | Sign in as a customer to view status of project                                                 |
 | 12  | Site User    | View the completed work, accept the result or request a round of changes                        |
@@ -242,6 +242,11 @@ share work upon completion.
 
 ## Bug Fixes
 
+- During development of the bag app, an issue arose in which the plus and minus buttons to adjust quantity of an item in the bag didn't function properly. The script was implemented on the product_detail page,
+wherein it worked perfectly fine, but the same could not be said for the bag page. As this was copied from the product_detail page, which in turn was near verbatim from the Boutique Ado walkthrough project, 
+the code was studied and compared to that in the walkthrough. However there were no differences - aside from the exclusion of the sizing if else statement as no sizes were required on this project.
+The fix came when the copied code from the product_detail page was deleted entirely, then rewritten manually from scratch. Though it was identical, to how it had been before, the code now worked.
+
 ## Browser Compatibility
 
 ## Responsive Design
@@ -278,7 +283,9 @@ share work upon completion.
 
 ### Code
 
-- [Image Modal](https://www.w3schools.com/css/tryit.asp?filename=trycss_image_modal_js) thanks to W3Schools.
+- Image Modal from [W3Schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_image_modal_js)
+
+- Arrow Up CSS from [CSS-Tricks](https://css-tricks.com/snippets/css/css-triangle/)
 
 ### Acknowledgements
 
