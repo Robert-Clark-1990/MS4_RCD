@@ -46,9 +46,11 @@ INSTALLED_APPS = [
     'products',
     'portfolio',
     'contact',
-    'crispy_forms',
     'bag',
     'checkout',
+
+    # Other
+    'crispy_forms',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -82,6 +84,10 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
