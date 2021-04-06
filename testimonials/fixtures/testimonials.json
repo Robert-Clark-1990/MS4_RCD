@@ -1,0 +1,82 @@
+[
+    {
+        "pk": 1,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000001",
+            "name": "Tom C",
+            "review": "Incredible work. Absolutely blown away by it. Would deal with again!",
+            "image": "ttl000001.png"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000002",
+            "name": "Adelle",
+            "review": "The perfect wedding gift! I love it so much! Thank you Rob!",
+            "image": "ttl000002.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000003",
+            "name": "Joss Carlton-Rylance",
+            "review": "Captured the moment perfectly. I'll cherish this for as long as I live.",
+            "image": "ttl000003.png"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000004",
+            "name": "Mike",
+            "review": "Love it!",
+            "image": "ttl000004.png"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000005",
+            "name": "Elise",
+            "review": "5 Stars. Would use again.",
+            "image": "ttl000005.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000006",
+            "name": "Sue",
+            "review": "I can't believe how much detail they got in the picture!!! Wow!!!",
+            "image": "ttl000006.png"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000007",
+            "name": "Anon",
+            "review": "I love love love this pic! Reminds me of New Zealand everyday xx",
+            "image": "ttl000007.png"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "testimonials.testimonial",
+        "fields": {
+            "sku": "ttl000008",
+            "name": "Dave",
+            "review": "Proper mint that. Well impressed",
+            "image": "ttl000008.png"
+        }
+    }
+]
