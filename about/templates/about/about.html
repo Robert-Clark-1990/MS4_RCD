@@ -18,8 +18,31 @@
                 <hr class="w-100 mb-1">
             </div>
         </div>
-    </div>
-    <div class="container h-100">
-
+        <div class="container h-100">
+            <div class="row h-100 justify-content-between mt-5">
+                <div class="col-sm-12 col-md-6 my-auto">
+                    <h6>Hi there, I'm Rob, a Yorkshire born Self-Published Author, Graphic Design Artist and Software Developer.
+                    <br>
+                    <br>
+                    In 2013, I completed a Masters Degree in Creative Writing, and have since gone on to publish 10 novels, with another 4 in development. 
+                    You can find out more about my literary work <a href="http://robertclarkauthor.com/"  class="free-quote-button btn rounded-3 p-0 m-0">here.</a>
+                    <br>
+                    <br>
+                    In 2016, I completed a Diploma in Digital Marketing, and have worked with organisations and individuals across the UK to create marketing strategies, 
+                    PR opportunities and promotional material. You can see some of the people I've worked with <a href="{% url 'portfolio' %}" class="free-quote-button btn rounded-3 p-0 m-0">here.</a>
+                    <br>
+                    <br>
+                    In 2021, I completed a Diploma in Software Development, gaining knowledge in HTML, CSS, JavaScript, Python and Django. I built this website, in case you wanted proof.
+                    <br>
+                    <br>
+                    This combination of skills has made me an invaluable asset to any business looking for someone who can carry their vision. So if you like what you see, 
+                    <a href="{% url 'contact' %}" class="free-quote-button btn rounded-3 p-0 m-0">get in touch!</a>
+                    </h6>
+                </div>
+                <div class="col-sm-12 col-md-5 my-auto">
+                    <img src="{{ MEDIA_URL }}RCD_logo_with_text.png" alt="Robert Clark Design" width="500" height="500">
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
