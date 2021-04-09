@@ -1,0 +1,27 @@
+Hello {{ order.full_name }}
+
+Thank you so much for purchasing something from my store. This here is a confirmation of your order at Robert Clark Design. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Delivery: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+If you ordered a commission package, you may now log in on the Robert Clark Design website and upload the image(s) you wish to be used in the commission.
+
+Otherwise, your order will be shipped to the address provided below:
+
+{{ order.street_address1 }}
+{{ order.town_or_city }}
+{{ order.country }}
+
+If you have any further questions, please feel free to contact us at {{ contact.email }}.
+
+Thank you again for your order!
+
+All the best,
+
+Rob
+Robert Clark Design
