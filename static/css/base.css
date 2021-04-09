@@ -200,7 +200,7 @@ input[name='q']::placeholder {
   height: auto;
 }
 
-.overlay {
+div.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -217,7 +217,7 @@ input[name='q']::placeholder {
   opacity: 1;
 }
 
-.overlay-text {
+.overlay-text p {
   color: white;
   position: absolute;
   top: 50%;

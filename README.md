@@ -242,14 +242,18 @@ share work upon completion.
 
 ## Bug Fixes
 
-- During development of the bag app, an issue arose in which the plus and minus buttons to adjust quantity of an item in the bag didn't function properly. The script was implemented on the product_detail page,
-wherein it worked perfectly fine, but the same could not be said for the bag page. As this was copied from the product_detail page, which in turn was near verbatim from the Boutique Ado walkthrough project, 
-the code was studied and compared to that in the walkthrough. However there were no differences - aside from the exclusion of the sizing if else statement as no sizes were required on this project.
+- **Adjust Quantity Buttons** - During development of the bag app, an issue arose in which the plus and minus buttons to adjust quantity of an item in the bag didn't function properly. The script was implemented on the product_detail page, wherein it worked perfectly fine, but the same could not be said for the bag page. As this was copied from the product_detail page, which in turn was near verbatim from the Boutique Ado walkthrough project, the code was studied and compared to that in the walkthrough. However there were no differences - aside from the exclusion of the sizing if else statement as no sizes were required on this project.
 The fix came when the copied code from the product_detail page was deleted entirely, then rewritten manually from scratch. Though it was identical, to how it had been before, the code now worked.
 
-- Checkout Webhook
+- **Checkout Webhook** -
 During the creation of webhooks to ensure the Stripe payments would work as intended, a 500 error was being raised when a payment was submitted. Both the payment_intent.created and charge.succeeded went go through as intended, but the payment_intent.succeeded did not without manually resubmitting it in the Stripe dashboard. The terminal raised a ValueError saying the view checkout.webhooks.webhook didn’t return a HttpResponse object, and returned None instead. 
 The issue came from the webhooks_handler.py file, which was missing a return at the end of the handle_payment_intent_succeeded function's else statement. Once this was included, the error was resolved.
+
+- **Duplicate Street_address1** -
+During tests of the payment system, an error appeared to show that the street_address2 input was being overridden by a second street_address1. On closer inspection, this turned out to be a simple error on the checkout_success.html page wherein the street_address1 tag had been repeated and not changed to street_address2.
+
+- **Unresponsible CSS/JS files** -
+During production, an error arose in which any CSS or JS files outside the base files were not working as intended. Research underway to see if this was an issue with Bootstrap or Django, but in the end the answer was much simpler. In the base.html file, the extra_css and extra_js blocks had been written as extracss and extrajs, meaning they weren't picking up new block files. This fix in turn solved all outstanding CSS and JS issues.
 
 
 ## Browser Compatibility
