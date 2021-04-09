@@ -67,16 +67,17 @@ def checkout(request):
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "An item in your bag wasn't found in our database."
-                        "Please contact us for assistance.")
+                        "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse(
                 'checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
-                Please double check your information and try again.')
+                Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -96,7 +97,7 @@ def checkout(request):
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in the environment?')
+            Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {

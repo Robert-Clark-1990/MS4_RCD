@@ -4,8 +4,8 @@
   height: 40px;
   padding: 10px 12px;
   border: 1px solid transparent;
-  border-radius: 0px;
-  background-color: white;
+  border-radius: 5px;
+  background-color: #faf8f0;
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
@@ -22,7 +22,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #505458;
 }
 
 .fieldset-label {
@@ -33,10 +33,20 @@
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid rgb(56, 56, 56);
 }
 
 /* Loading Overlay for when payment is processing */
+
+select,
+select option {
+  color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #505458 !important;
+}
 
 #loading-overlay {
   display: none;
