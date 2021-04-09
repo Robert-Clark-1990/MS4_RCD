@@ -9,7 +9,7 @@
 
   <h2 class="text-center">{% trans "Sign In" %}</h2>
   <hr>
-  <div class="row justify-content-md-center">
+  <div class="row justify-content-center">
     
     {% get_providers as socialaccount_providers %}
 
@@ -36,25 +36,23 @@
     {% endif %}
   </div>
 
-  <div class="row justify-content-md-center">
-    <div class="col-12 col-md-6">
+  <div class="row justify-content-center">
       <form class="login" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        {{ form|crispy }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn form-button rounded-5" type="submit">{% trans "Sign In" %}</button>
-        <br>
-        <br>
-        <a class="btn btn-outline-dark rounded-5" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          {% csrf_token %}
+          {{ form|crispy }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="btn form-button btn-block rounded-5" type="submit">{% trans "Sign In" %}</button>
+          <p>
+              <a class="btn btn-outline-dark btn-block rounded-5" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          </p>
       </form>
-    </div>
   </div>
   <hr>
 
-  <div class="row justify-content-md-center">
-    <a href="{% url 'home' %}" class="btn form-button rounded-5">Home</a>
+  <div class="row justify-content-center">
+      <a href="{% url 'home' %}" class="btn form-button rounded-5">Home</a>
   </div>
 
 {% endblock %}
