@@ -247,6 +247,11 @@ wherein it worked perfectly fine, but the same could not be said for the bag pag
 the code was studied and compared to that in the walkthrough. However there were no differences - aside from the exclusion of the sizing if else statement as no sizes were required on this project.
 The fix came when the copied code from the product_detail page was deleted entirely, then rewritten manually from scratch. Though it was identical, to how it had been before, the code now worked.
 
+- Checkout Webhook
+During the creation of webhooks to ensure the Stripe payments would work as intended, a 500 error was being raised when a payment was submitted. Both the payment_intent.created and charge.succeeded went go through as intended, but the payment_intent.succeeded did not without manually resubmitting it in the Stripe dashboard. The terminal raised a ValueError saying the view checkout.webhooks.webhook didn’t return a HttpResponse object, and returned None instead. 
+The issue came from the webhooks_handler.py file, which was missing a return at the end of the handle_payment_intent_succeeded function's else statement. Once this was included, the error was resolved.
+
+
 ## Browser Compatibility
 
 ## Responsive Design
