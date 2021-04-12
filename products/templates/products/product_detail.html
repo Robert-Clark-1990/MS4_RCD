@@ -32,7 +32,15 @@
             </div>
             <div class="col-8 offset-2 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    <img id="product-image" src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                {% endif %}
                 </div>
             </div>
 
