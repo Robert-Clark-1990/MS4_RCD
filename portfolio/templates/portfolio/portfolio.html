@@ -41,21 +41,23 @@
                 <div class="row">
                     {% for project in portfolio %}
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div id="image-container" class="card h-100 border-0">
+                            <div class="image-container h-100 border-0 rounded-5">
                                 {% if project.image %}
                                     <a href="{% url 'project_detail' project.id %}">
-                                        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top img-fluid">
+                                        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="testimonial-image img-fluid rounded-5">
                                     </a>
                                 {% else %}
                                     <a href="{% url 'project_detail' project.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ project.name }}">
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ project.name }}" class="testimonial-image img-fluid rounded-5">
                                     </a>
                                 {% endif %}
-                                <div class="card-body pb-0">
-                                    <a href="{% url 'project_detail' project.id %}">
-                                        <p class="product-link mb-0 font-weight-bold">{{ project.name }}</p>
-                                    </a>
-                                </div>
+                                <a href="{% url 'project_detail' project.id %}">
+                                    <div class="overlay">
+                                        <div class="overlay-text"> 
+                                            <h3 class="text-white text-uppercase mb-0 font-weight-bold">{{ project.name }}</h3>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}

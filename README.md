@@ -255,6 +255,9 @@ During tests of the payment system, an error appeared to show that the street_ad
 - **Unresponsible CSS/JS files** -
 During production, an error arose in which any CSS or JS files outside the base files were not working as intended. Research underway to see if this was an issue with Bootstrap or Django, but in the end the answer was much simpler. In the base.html file, the extra_css and extra_js blocks had been written as extracss and extrajs, meaning they weren't picking up new block files. This fix in turn solved all outstanding CSS and JS issues.
 
+- **NoReverseMatch** -
+During the creation of add/edit functions on the Portfolio and Testimonials, an error arose wherein a NoReverseMatch error was raising when attempting to reach the edit pages. After further research, this was an issue that arose from the project.id missing from the {% url 'edit_project' %} links.
+ 
 
 ## Browser Compatibility
 
