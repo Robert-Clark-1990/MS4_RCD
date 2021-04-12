@@ -24,27 +24,31 @@
                 <div class="row">
                     {% for testimonial in testimonials %}
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div id="image-container" class="h-100 border-0 rounded-5">
+                            <div class="image-container h-100 border-0 rounded-5">
                                 {% if testimonial.image %}
-                                    <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="testimonial-image img-fluid rounded-5">
+                                    <img class="testimonial-image img-fluid rounded-5" src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
                                 {% else %}
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ testimonial.name }}">
-                                {% endif %}                          
+                                    <img class="testimonial-image img-fluid rounded-5" src="{{ MEDIA_URL }}noimage.png" alt="{{ testimonial.name }}">
+                                {% endif %}        
                                 <div class="overlay">
-                                    <p class="overlay-text mb-0 font-weight-bold">"{{ testimonial.review }}"</p>
-                                    <p class="overlay-text mb-0">{{ testimonial.name }}</p>
+                                    <div class="overlay-text">                 
+                                        <h4 class="font-weight-bold font-italic text-white">"{{ testimonial.review }}"</h4>
+                                        <br>
+                                        {{ testimonial.name }}
+                                    </div> 
                                 </div>
-                                {% if request.user.is_superuser %}
-                                    <small class="ml-3">
-                                        <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a>
-                                    </small>
-                                {% endif %}
                             </div>
+                            {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a>
+                                </small>
+                            {% endif %}
                         </div>
+                        
                         {% if forloop.counter|divisibleby:1 %}
-                        <div class="col-12 d-sm-none mb-5">
-                            <hr class="hidden-line-break">
-                        </div>
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr class="hidden-line-break">
+                            </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:2 %}
                             <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">

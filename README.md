@@ -296,6 +296,8 @@ During production, an error arose in which any CSS or JS files outside the base 
 
 - Arrow Up CSS from [CSS-Tricks](https://css-tricks.com/snippets/css/css-triangle/)
 
+- Image Hover from [css-workshop](http://css-workshop.com/hover-box-text-over-images-on-hover-and-more/)
+
 ### Acknowledgements
 
 - Thanks to **Precious Ijege** for his continued assistance as mentor.
