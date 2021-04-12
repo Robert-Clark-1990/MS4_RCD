@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2>Admin Management</h2>
+                <h5 class="text-muted">Homepage</h5>
+                <hr class="w-100 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <div class="row justify-content-md-center mb-5">
+                    <div class="col-12 col-md-6 col-lg-3 text-center">
+                        <h5 class="mt-3 mb-3"><strong>Projects</strong></h5>
+                        <hr>
+                        <p>View Outstanding Client Projects</p>
+                        <br>
+                        <a href="" class="btn form-button btn-block">View Projects</a>
+                        <br>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 text-center">
+                        <h5 class="mt-3 mb-3"><strong>Store</strong></h5>
+                        <hr>
+                        <p>Add / Edit Store Products</p>
+                        <br>
+                        <a href="{% url 'add_product' %}" class="btn form-button btn-block">Add Product</a>
+                        <br>
+                        <a href="" class="btn form-button btn-block">Edit Product</a>
+                        <br>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 text-center">
+                        <h5 class="mt-3 mb-3"><strong>Portfolio</strong></h5>
+                        <hr>
+                        <p>Add / Edit Portfolio</p>
+                        <br>
+                        <a href="" class="btn form-button btn-block">Add Portfolio Project</a>
+                        <br>
+                        <a href="" class="btn form-button btn-block">Edit Portfolio Project</a>
+                        <br>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 text-center">
+                        <h5 class="mt-3 mb-3"><strong>Testimonials</strong></h5>
+                        <hr>
+                        <p>Add / Edit Client Testimonials</p>
+                        <br>
+                        <a href="" class="btn form-button btn-block">Add Testimonial</a>
+                        <br>
+                        <a href="" class="btn form-button btn-block">Edit Testimonial</a>
+                        <br>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+{% endblock %}
