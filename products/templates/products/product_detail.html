@@ -29,6 +29,10 @@
                     </span>
                     <span>Back</span>
                 </a>
+                {% if request.user.is_superuser %}
+                <a href="{% url 'edit_product' product.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
+                {% endif %}
             </div>
             <div class="col-8 offset-2 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
