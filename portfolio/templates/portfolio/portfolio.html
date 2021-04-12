@@ -42,9 +42,15 @@
                     {% for project in portfolio %}
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div id="image-container" class="card h-100 border-0">
-                                <a href="{% url 'project_detail' project.id %}">
-                                    <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top img-fluid">
-                                </a>
+                                {% if project.image %}
+                                    <a href="{% url 'project_detail' project.id %}">
+                                        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top img-fluid">
+                                    </a>
+                                {% else %}
+                                    <a href="{% url 'project_detail' project.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ project.name }}">
+                                    </a>
+                                {% endif %}
                                 <div class="card-body pb-0">
                                     <a href="{% url 'project_detail' project.id %}">
                                         <p class="product-link mb-0 font-weight-bold">{{ project.name }}</p>

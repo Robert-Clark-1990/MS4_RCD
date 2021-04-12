@@ -25,9 +25,11 @@
                     <div class="col-12 col-md-6 col-lg-3 text-center">
                         <h5 class="mt-3 mb-3"><strong>Projects</strong></h5>
                         <hr>
-                        <p>View Outstanding Client Projects</p>
+                        <p>View Projects and Sales</p>
                         <br>
                         <a href="" class="btn form-button btn-block">View Projects</a>
+                        <br>
+                        <a href="" class="btn form-button btn-block">View Sales</a>
                         <br>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -37,7 +39,7 @@
                         <br>
                         <a href="{% url 'add_product' %}" class="btn form-button btn-block">Add Product</a>
                         <br>
-                        <a href="" class="btn form-button btn-block">Edit Product</a>
+                        <a href="{% url 'products' %}" class="btn form-button btn-block">Edit Product</a>
                         <br>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -45,9 +47,9 @@
                         <hr>
                         <p>Add / Edit Portfolio</p>
                         <br>
-                        <a href="" class="btn form-button btn-block">Add Portfolio Project</a>
+                        <a href="{% url 'add_project' %}" class="btn form-button btn-block">Add Portfolio Project</a>
                         <br>
-                        <a href="" class="btn form-button btn-block">Edit Portfolio Project</a>
+                        <a href="{% url 'portfolio' %}" class="btn form-button btn-block">Edit Portfolio Project</a>
                         <br>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -55,9 +57,9 @@
                         <hr>
                         <p>Add / Edit Client Testimonials</p>
                         <br>
-                        <a href="" class="btn form-button btn-block">Add Testimonial</a>
+                        <a href="{% url 'add_testimonial' %}" class="btn form-button btn-block">Add Testimonial</a>
                         <br>
-                        <a href="" class="btn form-button btn-block">Edit Testimonial</a>
+                        <a href="{% url 'testimonials' %}" class="btn form-button btn-block">Edit Testimonial</a>
                         <br>
                     </div>
                 </div>            

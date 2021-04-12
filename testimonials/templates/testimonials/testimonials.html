@@ -25,7 +25,11 @@
                     {% for testimonial in testimonials %}
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div id="image-container" class="h-100 border-0 rounded-5">
-                                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="testimonial-image img-fluid rounded-5">
+                                {% if testimonial.image %}
+                                    <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="testimonial-image img-fluid rounded-5">
+                                {% else %}
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ testimonial.name }}">
+                                {% endif %}                          
                                 <div class="overlay">
                                     <p class="overlay-text mb-0 font-weight-bold">"{{ testimonial.review }}"</p>
                                     <p class="overlay-text mb-0">{{ testimonial.name }}</p>

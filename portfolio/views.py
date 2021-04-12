@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Project
+from .forms import ProjectForm
 
 
 def portfolio(request):
@@ -42,3 +43,26 @@ def project_detail(request, project_id):
     }
 
     return render(request, 'portfolio/project_detail.html', context)
+
+
+def add_project(request):
+    """ Add a new project to the portfolio """
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, request.FILES)
+        if form.is_valid():
+            project = form.save()
+            messages.success(request, 'Project added successfully!')
+            return redirect(reverse('project_detail', args=[project.id]))
+        else:
+            messages.error(request, 'Failed to add project.\
+                 Please ensure the form is valid')
+    else:
+        form = ProjectForm()
+
+    form = ProjectForm()
+    template = 'portfolio/add_project.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
