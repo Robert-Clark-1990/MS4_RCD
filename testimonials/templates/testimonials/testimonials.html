@@ -34,6 +34,11 @@
                                     <p class="overlay-text mb-0 font-weight-bold">"{{ testimonial.review }}"</p>
                                     <p class="overlay-text mb-0">{{ testimonial.name }}</p>
                                 </div>
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a>
+                                    </small>
+                                {% endif %}
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
