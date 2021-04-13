@@ -20,16 +20,26 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row justify-content-md-center mb-5">
+            <div class="product-container col-10 offset-1 mb-5">
+                <div class="row justify-content-center mb-5">
                     <div class="col-12 col-md-6 col-lg-3 text-center">
                         <h5 class="mt-3 mb-3"><strong>Projects</strong></h5>
                         <hr>
                         <p>View Projects and Sales</p>
                         <br>
-                        <a href="" class="btn form-button btn-block">View Projects</a>
+                        <a href="" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-tasks"></i>         
+                            </span>
+                            <span>View Projects</span>
+                        </a>
                         <br>
-                        <a href="" class="btn form-button btn-block">View Sales</a>
+                        <a href="{% url 'order_history' %}" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-receipt"></i>          
+                            </span>
+                            <span>Order History</span>
+                        </a>
                         <br>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -37,9 +47,19 @@
                         <hr>
                         <p>Add / Edit Store Products</p>
                         <br>
-                        <a href="{% url 'add_product' %}" class="btn form-button btn-block">Add Product</a>
+                        <a href="{% url 'add_product' %}" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-plus-square"></i>          
+                            </span>
+                            <span>Add Product</span>
+                        </a>
                         <br>
-                        <a href="{% url 'products' %}" class="btn form-button btn-block">Edit Product</a>
+                        <a href="{% url 'products' %}" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-edit"></i>          
+                            </span>
+                            <span>Edit Product</span>
+                        </a>
                         <br>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -47,9 +67,19 @@
                         <hr>
                         <p>Add / Edit Portfolio</p>
                         <br>
-                        <a href="{% url 'add_project' %}" class="btn form-button btn-block">Add Portfolio Project</a>
+                        <a href="{% url 'add_project' %}" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-plus-square"></i>          
+                            </span>
+                            <span>Add Portfolio Project</span>
+                        </a>
                         <br>
-                        <a href="{% url 'portfolio' %}" class="btn form-button btn-block">Edit Portfolio Project</a>
+                        <a href="{% url 'portfolio' %}" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-edit"></i>          
+                            </span>
+                            <span>Edit Portfolio Project</span>
+                        </a>
                         <br>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -57,9 +87,19 @@
                         <hr>
                         <p>Add / Edit Client Testimonials</p>
                         <br>
-                        <a href="{% url 'add_testimonial' %}" class="btn form-button btn-block">Add Testimonial</a>
+                        <a href="{% url 'add_testimonial' %}" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-plus-square"></i>          
+                            </span>
+                            <span>Add Testimonial</span>
+                        </a>
                         <br>
-                        <a href="{% url 'testimonials' %}" class="btn form-button btn-block">Edit Testimonial</a>
+                        <a href="{% url 'testimonials' %}" class="btn form-button btn-block pt-5 pb-5">
+                            <span class="icon">
+                                <i class="fas fa-edit"></i>          
+                            </span>
+                            <span>Edit Testimonial</span>
+                        </a>
                         <br>
                     </div>
                 </div>            
