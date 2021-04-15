@@ -1,8 +1,7 @@
 # Milestone Project 4 - Robert Clark Design
 
-`<-- INSERT SITE LINKS -->`
-- [Host Link]()
-- [GitHub Repo Link]()
+- [Host Link](https://robertclarkdesign.herokuapp.com/)
+- [GitHub Repo Link](https://github.com/Robert-Clark-1990/MS4_RCD)
 
 # Table of Contents
 
@@ -58,10 +57,7 @@ into a portfolio of my work and a place where I can sell my design and developme
 
 ## Project Goals
 
-**Robert Clark Design** is a full stack website that showcases a portfolio of design and development projects. The purpose is to demonstrate the work and skillset of the site user in an inviting
-and stylish way in order to encourage site visitors to request and purchase an array of available design and development services. Once a user has purchased a product, they will be able to log
-in via the email and password they provided at checkout and view the status of their work. The site owner will be able to upload the finished product via the website, which the customer will then
-be able to either accept or request a round of changes. Once the customer has accepted, they will be invited to leave a testimonial which will display on the site.
+**Robert Clark Design** is a full stack website that showcases a portfolio of design and development projects. The purpose is to demonstrate the work and skillset of the site user in an inviting and stylish way in order to encourage site visitors to request and purchase an array of available products, or purchase a commission package. Once a user has purchased a product, they will be able to log in via the email and password and view their order history, or if they purchased a commission package, they will be able to upload images for reference, and view the status of their work. The site owner will be able to upload the finished product via the website, which the customer will then be able to either accept or request a round of changes. Once the customer has accepted, they will be invited to leave a testimonial which will display on the site.
 
 
 ## User Stories
@@ -100,28 +96,27 @@ the project, the designs evolved to meet the expanded scope, however the basic s
 
 ## Site Design
 
-In order to draw focus to the work in the portfolio, the site will have a clean, minimalist design, encouraging white space where possible. This will be juxtaposed through the use of geometric
-art, which is favoured by the site owner and used throughout his work.
+In order to draw focus to the work in the portfolio, the site will have a clean, minimalist design, encouraging white space where possible. This will be juxtaposed through the use of geometric art, which is favoured by the site owner and used throughout his work.
 
 ### Colour Scheme
 
-In keeping with the site logo, vibrant primary colours will be used alongside a white background to draw attention to the work. However, the site will not be limited to the use of primary colours
-and will expand where necessary to encourage site users to view everything the site has to offer.
+In keeping with the site logo, vibrant primary colours will be used alongside a white background to draw attention to the work. However, the site will not be limited to the use of primary colours and will expand where necessary to encourage site users to view everything the site has to offer.
 
 ### Typography
 
-To match the minimalistic design of the site, the Google Font [Poppins](https://fonts.google.com/specimen/Poppins?preview.text=Robert%20Clark%20Design&preview.text_type=custom) was used. This font
-was selected to ensure user accessibility and readibility was always at the forefront of site design.
+To match the minimalistic design of the site, the Google Font [Poppins](https://fonts.google.com/specimen/Poppins?preview.text=Robert%20Clark%20Design&preview.text_type=custom) was used. This font was selected to ensure user accessibility and readibility was always at the forefront of site design.
 
 ### Artwork
 
-A strong focus on geometric design was used throughout the site, showcasing the site owner's penchant for the style. However, this was never limited to solely this style as the main purpose of the
-site was to showcase a wide array of talent. This is never more prevalent than on the portfolio page, wherein the site user can view a range of the site owner's previous work.
+A strong focus on geometric design was used throughout the site, showcasing the site owner's penchant for the style. However, this was never limited to solely this style as the main purpose of the site was to showcase a wide array of talent. This is never more prevalent than on the portfolio page, wherein the site user can view a range of the site owner's previous work.
 
 
 ## Database Design
 
-`<-- INSERT DATABASE SCHEMA -->`
+All data related to this project is saved in JSON files across three apps. The Portfolio app is separated from the rest as it contains data from previous works, and would only be updated with new information if a new client was taken on. The Products app contains JSON files for Products and Categories. Users who purchase a commission package will then be invited to leave a testimonial, which will bring forward data to be used in the Testimonials app.
+The model below was created using [Draw SQL](https://drawsql.app/rob-clark/diagrams/rcd)
+
+![Database Schema](documents/images/database-schema.png)
 
 ---
 
