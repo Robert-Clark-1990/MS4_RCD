@@ -253,6 +253,15 @@ During production, an error arose in which any CSS or JS files outside the base 
 - **NoReverseMatch** -
 During the creation of add/edit functions on the Portfolio and Testimonials, an error arose wherein a NoReverseMatch error was raising when attempting to reach the edit pages. After further research, this was an issue that arose from the project.id missing from the {% url 'edit_project' %} links.
  
+ - **SECRET_KEY** -
+ Once the project had been deployed to Heroku and the Static and Media files were stored on AWS, two issues arose the next time the project was opened on Gitpod. The first was this warning:
+ `django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.`
+ This came as a surprise as there had been no issues with the SECRET_KEY thus far, and the deployed Heroku version worked fine. To fix this, a env.py file was created to store the SECRET_KEY, and - surprisingly - the following was added to the settings.py file: `SECRET_KEY = os.environ.get('SECRET_KEY', 'some value if your key is not in the environment') `
+ The error no longer appeared, and since it appears to be a Gitpod-side problem, there should be no forseeable issues in the future of the project.
+
+ - **Media and Static Files Not Loading**
+The second of the two post-deployment issues, when the Gitpod server was run all the media and static files no longer loaded after the Heroku deployment. At first, this was thought to be an issue with the `DISABLE_COLLECTSTATIC`, but this was not the case. Instead, it appeared to be a fault with the site attempting to load local files instead of the hosted AWS files. This was not the case on the Heroku site, so to fix the `USE_AWS` variable was added to the Gitpod environment. This solved the issue, however care was needed to ensure any changes made on local css files were pushed to AWS.
+ 
 
 ## Browser Compatibility
 
