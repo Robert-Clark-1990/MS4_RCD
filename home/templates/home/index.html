@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -11,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container h-100">    
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 order-md-last my-auto text-center">
                 <img src="{{ MEDIA_URL }}rcd_profile.png" alt="Robert Clark Design" class="page-image mb-3">
@@ -27,6 +31,7 @@
                     </p>
                 </div>
             </div>
+            <a class="ca3-scroll-down-link ca3-scroll-down-arrow black-text" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
         </div>
         <hr>
 

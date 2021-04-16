@@ -305,6 +305,10 @@ The second of the two post-deployment issues, when the Gitpod server was run all
 
 - Image Hover from [css-workshop](http://css-workshop.com/hover-box-text-over-images-on-hover-and-more/)
 
+- Arrow Scroll Down CSS from [CSSHint](https://csshint.com/html-css-scroll-down-arrow-examples/)
+
 ### Acknowledgements
 
 - Thanks to **Precious Ijege** for his continued assistance as mentor.
+
+- Thanks to the **Code Institute tutors** who were there in times of crisis to help guide this developer in the right direction.
