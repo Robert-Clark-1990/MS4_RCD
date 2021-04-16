@@ -205,9 +205,19 @@ input[name='q']::placeholder {
     background-color: #9c020e;
 }
 
+/* ----------------------------------------------------- Portfolio Page */
+
+.portfolio-text {
+    font-size: 1.5em;
+}
+
 /* ----------------------------------------------------- Testimonial Page */
 
 /* -- Credit to css-workshop.com - link in README  */
+
+.testimonial-text {
+    font-size: 1.2em;
+}
 
 .image-container,
 .image-container * {
@@ -260,7 +270,7 @@ input[name='q']::placeholder {
     color: white;
     text-shadow: 2px 2px 4px #000000;
     position: relative;
-	top: 35%;
+	top: 30%;
     transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -359,6 +369,9 @@ input[name='q']::placeholder {
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+    .image-container .overlay-text {
+        top: 35%;
     }
 
     .page-image {
