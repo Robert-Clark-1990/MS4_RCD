@@ -13,21 +13,21 @@
         </div>
     </div>
 {% endblock %}
-
+ 
 {% block content %}
     <div class="container h-100">    
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 order-md-last my-auto text-center">
-                <img src="{{ MEDIA_URL }}rcd_profile.png" alt="Robert Clark Design" class="page-image mb-3">
+                <img src="{{ MEDIA_URL }}rcd_profile.png" alt="Robert Clark Design" class="page-image mb-3 fade-in-element hidden">
             </div>
             <div class="col-12 col-md-6 my-auto mb-3 text-center">
                 <div class="col-12">
-                    <h2 class="homepage-subheader mb-2">Hi there, I'm Rob, and I love to create!</h2>
-                    <p class="homepage-text">From logos to family portraits, book covers to websites, I will turn your vision into a reality.</p>
+                    <h2 class="homepage-subheader fade-in-element hidden mb-2">Hi there, I'm Rob, and I love to create!</h2>
+                    <p class="homepage-text fade-in-element hidden">From logos to family portraits, book covers to websites, I will turn your vision into a reality.</p>
                 </div>
                 <div class="col-12">
                     <p class="homepage-text">
-                        <a href="{% url 'contact' %}" class="free-quote-button btn btn-lg rounded-3 mb-5">Get a free quote today</a>
+                        <a href="{% url 'contact' %}" class="free-quote-button btn btn-lg rounded-3 mb-5 fade-in-element hidden">Get a free quote today</a>
                     </p>
                 </div>
             </div>
@@ -37,17 +37,17 @@
 
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 my-auto text-center">
-                <img src="{{ MEDIA_URL }}portfolio_gif.gif" alt="Portfolio" class="rounded-circle page-image mb-3">
+                <img src="{{ MEDIA_URL }}portfolio_gif.gif" alt="Portfolio" class="rounded-circle page-image mb-3 hidden">
             </div>
             <div class="col-12 col-md-6 my-auto mb-3 text-center">
                 <div class="col-12">
-                    <h3 class="homepage-subheader mb-2">When I say I love to create, I really mean it.</h3>
-                    <p class="homepage-text mb-2">I'm a self-published author, graphic designer, digital marketer and software developer, all in one.</p>
-                    <p class="homepage-text mb-2"> So if you're looking for someone who can do it all for you, you're in the right place.</p>
+                    <h3 class="homepage-subheader mb-2 hidden">When I say I love to create, I really mean it.</h3>
+                    <p class="homepage-text mb-2 hidden">I'm a self-published author, graphic designer, digital marketer and software developer, all in one.</p>
+                    <p class="homepage-text mb-2 hidden"> So if you're looking for someone who can do it all for you, you're in the right place.</p>
                 </div>          
                 <div class="col-12">
                     <p class="homepage-text">
-                        <a href="{% url 'portfolio' %}" class="free-quote-button btn btn-lg rounded-3 mb-5">Check out my Portfolio!</a>
+                        <a href="{% url 'portfolio' %}" class="free-quote-button btn btn-lg rounded-3 mb-5 hidden">Check out my Portfolio!</a>
                     </p>
                 </div>
             </div>
@@ -56,17 +56,17 @@
 
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 order-md-last my-auto text-center">
-                <img src="{{ MEDIA_URL }}art_eg.png" alt="Whitby Abbey" class="rounded-circle page-image mb-3">
+                <img src="{{ MEDIA_URL }}art_eg.png" alt="Whitby Abbey" class="rounded-circle page-image mb-3 hidden">
             </div>
             <div class="col-12 col-md-6 my-auto mb-3 text-center">
                 <div class="col-12">
-                    <h3 class="homepage-subheader mb-2">I sell things.</h3>
-                    <p class="homepage-text mb-2">I have an array of stunning geometric designs prints available in store that would make a great gift.</p>
-                    <p class="homepage-text mb-2">Or purchase a commission package to create something truly unique.</p>
+                    <h3 class="homepage-subheader mb-2 hidden">I sell things.</h3>
+                    <p class="homepage-text mb-2 hidden">I have an array of stunning geometric designs prints available in store that would make a great gift.</p>
+                    <p class="homepage-text mb-2 hidden">Or purchase a commission package to create something truly unique.</p>
                 </div>     
                 <div class="col-12">
                     <p class="homepage-text">
-                        <a href="{% url 'products' %}" class="free-quote-button btn btn-lg rounded-3 mb-5">Shop Now</a>
+                        <a href="{% url 'products' %}" class="free-quote-button btn btn-lg rounded-3 mb-5 hidden">Shop Now</a>
                     </p>
                 </div>
             </div>
@@ -75,16 +75,16 @@
 
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 my-auto text-center">
-                <img src="{{ MEDIA_URL }}commissions-gif.gif" alt="Commissions" class="rounded-circle page-image mb-3">
+                <img src="{{ MEDIA_URL }}commissions-gif.gif" alt="Commissions" class="rounded-circle page-image mb-3 hidden">
             </div>
             <div class="col-12 col-md-6 my-auto mb-3 text-center">
                 <div class="col-12">
-                    <h3 class="homepage-subheader mb-2">Looking for that special gift? I've got you covered!</h3>
-                    <p class="homepage-text mb-2">Turn a treasured memory into a stunning work of art that is certain to stand out as an amazing and heartfelt gift.</p>
+                    <h3 class="homepage-subheader mb-2 hidden">Looking for that special gift? I've got you covered!</h3>
+                    <p class="homepage-text mb-2 hidden">Turn a treasured memory into a stunning work of art that is certain to stand out as an amazing and heartfelt gift.</p>
                 </div>
                 <div class="col-12">
                     <p class="homepage-text">
-                        <a href="{% url 'testimonials' %}" class="free-quote-button btn btn-lg rounded-3 mb-5">Read testimonials from happy customers</a>
+                        <a href="{% url 'testimonials' %}" class="free-quote-button btn btn-lg rounded-3 mb-5 hidden">Read testimonials from happy customers</a>
                     </p>
                 </div>
             </div>
@@ -93,20 +93,25 @@
 
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 order-md-last my-auto text-center">
-                <img src="{{ MEDIA_URL }}about-me.png" alt="Rob Clark" class="rounded-circle page-image float-center mb-3">
+                <img src="{{ MEDIA_URL }}about-me.png" alt="Rob Clark" class="rounded-circle page-image float-center mb-3 hidden">
             </div>
             <div class="col-12 col-md-6 my-auto mb-3 text-center">
                 <div class="col-12">
-                    <h3 class="homepage-subheader mb-2">But who am I?</h3>
-                    <p class="homepage-text mb-2">Well like I said, I'm an author, artist and web designer. But that only scratches the surface, and if you're looking to work with a person, you want to know who they are.</p>
+                    <h3 class="homepage-subheader mb-2 hidden">But who am I?</h3>
+                    <p class="homepage-text mb-2 hidden">Well like I said, I'm an author, artist and web designer. But that only scratches the surface, and if you're looking to work with a person, you want to know who they are.</p>
                 </div>
                 <div class="col-12">
                     <p class="homepage-text">
-                        <a href="{% url 'about' %}" class="free-quote-button btn btn-lg rounded-3 mb-5">About Me</a>
+                        <a href="{% url 'about' %}" class="free-quote-button btn btn-lg rounded-3 mb-5 hidden">About Me</a>
                     </p>
                 </div>
             </div>
         </div>
         <hr>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}

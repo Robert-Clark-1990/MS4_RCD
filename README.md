@@ -309,6 +309,8 @@ The second of the two post-deployment issues, when the Gitpod server was run all
 
 - Vertical Timeline from [Sanchit Sharma](https://codepen.io/web_designer_sanchit/pen/eLjvyw)
 
+- Animate Scroll Elements from [Dev Tips and Tricks](https://www.dev-tips-and-tricks.com/animate-elements-scrolled-view-vanilla-js)
+
 ### Acknowledgements
 
 - Thanks to **Precious Ijege** for his continued assistance as mentor.

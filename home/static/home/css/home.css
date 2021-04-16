@@ -62,7 +62,17 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     }
 }
 
+/* Fade in animations for Homepage. Credit to div-tips-and-tricks.com - Link in README */
 
-@media (min-width: 992px) {
+@keyframes fade-in {
+  from {opacity: 0; transform: scale(.7,.7)}
+  to {opacity: 1;}
+}
 
+.fade-in-element {
+  animation: fade-in 1.4s;
+}
+
+.hidden {
+  opacity: 0;
 }
