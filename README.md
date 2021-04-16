@@ -307,6 +307,8 @@ The second of the two post-deployment issues, when the Gitpod server was run all
 
 - Arrow Scroll Down CSS from [CSSHint](https://csshint.com/html-css-scroll-down-arrow-examples/)
 
+- Vertical Timeline from [Sanchit Sharma](https://codepen.io/web_designer_sanchit/pen/eLjvyw)
+
 ### Acknowledgements
 
 - Thanks to **Precious Ijege** for his continued assistance as mentor.

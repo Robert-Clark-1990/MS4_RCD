@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'about/css/about.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -19,28 +23,82 @@
             </div>
         </div>
         <div class="container h-100">
-            <div class="row h-100 justify-content-between mt-5">
-                <div class="col-sm-12 col-md-6 my-auto">
-                    <h6>Hi there, I'm Rob, a Yorkshire born Self-Published Author, Graphic Design Artist and Software Developer.
-                    <br>
-                    <br>
-                    In 2013, I completed a Masters Degree in Creative Writing, and have since gone on to publish 10 novels, with another 4 in development. 
-                    You can find out more about my literary work <a href="http://robertclarkauthor.com/"  class="free-quote-button btn rounded-3 p-0 m-0">here.</a>
-                    <br>
-                    <br>
-                    In 2016, I completed a Diploma in Digital Marketing, and have worked with organisations and individuals across the UK to create marketing strategies, 
-                    PR opportunities and promotional material. You can see some of the people I've worked with <a href="{% url 'portfolio' %}" class="free-quote-button btn rounded-3 p-0 m-0">here.</a>
-                    <br>
-                    <br>
-                    In 2021, I completed a Diploma in Software Development, gaining knowledge in HTML, CSS, JavaScript, Python and Django. I built this website, in case you wanted proof.
-                    <br>
-                    <br>
-                    This combination of skills has made me an invaluable asset to any business looking for someone who can carry their vision. So if you like what you see, 
-                    <a href="{% url 'contact' %}" class="free-quote-button btn rounded-3 p-0 m-0">get in touch!</a>
-                    </h6>
+            <div class="row h-100 justify-content-center mt-5">
+                <div class="col-12 col-md-10">
+                    <p class="text-center">Hi there, I'm Rob, a Yorkshire born Self-Published Author, Graphic Design Artist and Software Developer.</p>
                 </div>
-                <div class="col-sm-12 col-md-5 my-auto">
-                    <img src="{{ MEDIA_URL }}RCD_logo_with_text.png" alt="Robert Clark Design" width="500" height="500">
+                <div class="timeline">
+                    <ul>
+                      <li>
+                        <div class="time">
+                          <span class="p-2">He Writes</span>
+                          <span><i class="fas fa-pencil-alt"></i></span>                
+                        </div>
+                        <div class="content">
+                            <p>I completed a Masters Degree in Creative Writing in 2013 at the University of Salford, and have since gone on to publish 10 novels, with another 4 in development, 
+                                all of which review 5-star reviews on Amazon. When I'm not using my talents to tell tales, I've put my creative side towards adverts, press releases, brochures, and much more.
+                                <br>
+                                <br>
+                                <a href="http://robertclarkauthor.com/" class="form-button btn rounded-5">View literary work here.</a>
+                            </p>
+                        </div>
+                      </li>
+                      
+                      <li>
+                        <div class="time">
+                          <span><i class="fas fa-paint-brush"></i></span>
+                          <span class="p-2">He Designs</span>
+                        </div>
+                        <div class="content">
+                            <p>I've been designing since I could hold a pencil. While other kids were out playing football, I was teaching myself Adobe Photoshop. Everything I know about designing, I've taught myself
+                                and the proof is in the work. My customers always love the work I create for them.
+                                <br>
+                                <br>
+                                <a href="{% url 'testimonials' %}" class="form-button btn rounded-5">See what people think of my work here.</a>
+                            </p>
+                        </div>
+                      </li>
+                      
+                      <li>
+                        <div class="time">
+                          <span class="p-2">He Markets</span>
+                          <span><i class="far fa-lightbulb"></i></span>
+                        </div>
+                        <div class="content">
+                            <p>In 2016, I completed a Diploma in Digital Marketing. I've worked with musicians, Youtubers, and companies big and small, creating marketing strategies, 
+                                PR opportunities, promotional material, and much more.
+                                <br>
+                                <br>
+                                <a href="{% url 'portfolio' %}" class="form-button btn rounded-5">See some of my clients here.</a>
+                            </p>
+                        </div>
+                      </li>
+                      
+                      <li>
+                        <div class="time">
+                          <span><i class="fas fa-laptop-code"></i></span>
+                          <span class="p-2">He Codes</span>
+                        </div>
+                        <div class="content">
+                            <p>In 2021, I completed a Diploma in Software Development, gaining knowledge in HTML, CSS, JavaScript, Python and Django. I built this website, in case you wanted proof. 
+                                I'm available to work on any development projects you may have, so if you're interested, please get in touch!
+                                <br>
+                                <br>
+                                <a href="https://github.com/Robert-Clark-1990" class="form-button btn rounded-5">View my Github here.</a>
+                            </p>
+                        </div>
+                      </li>
+                      <div style="clear:both;"></div>
+                    </ul>
+                  </div>
+
+                <div class="col-12 col-md-10 mb-5">
+                    <p class="text-center">
+                      This combination of skills has made me an invaluable asset to any business looking for someone who can carry their vision. 
+                    </p>
+                    <p class="mb-5 text-center">
+                      <a href="{% url 'contact' %}" class="form-button btn rounded-5 text-center">So if you like what you see, get in touch!</a>
+                    </p>
                 </div>
             </div>
         </div>
