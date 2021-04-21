@@ -41,63 +41,69 @@
         </div>
         <br>
         <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for project in portfolio %}
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="image-container h-100 border-0 rounded-5">
-                                {% if project.image %}
+            {% if portfolio %}
+                <div class="product-container col-10 offset-1">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row">
+                        {% for project in portfolio %}
+                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                <div class="image-container h-100 border-0 rounded-5">
+                                    {% if project.image %}
+                                        <a href="{% url 'project_detail' project.id %}">
+                                            <img src="{{ project.image.url }}" alt="{{ project.name }}" class="testimonial-image img-fluid rounded-5">
+                                        </a>
+                                    {% else %}
+                                        <a href="{% url 'project_detail' project.id %}">
+                                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ project.name }}" class="testimonial-image img-fluid rounded-5">
+                                        </a>
+                                    {% endif %}
                                     <a href="{% url 'project_detail' project.id %}">
-                                        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="testimonial-image img-fluid rounded-5">
-                                    </a>
-                                {% else %}
-                                    <a href="{% url 'project_detail' project.id %}">
-                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ project.name }}" class="testimonial-image img-fluid rounded-5">
-                                    </a>
-                                {% endif %}
-                                <a href="{% url 'project_detail' project.id %}">
-                                    <div class="overlay">
-                                        <div class="overlay-text"> 
-                                            <p class="text-white text-uppercase mb-0 font-weight-bold portfolio-text">{{ project.name }}</p>
+                                        <div class="overlay">
+                                            <div class="overlay-text"> 
+                                                <p class="text-white text-uppercase mb-0 font-weight-bold portfolio-text">{{ project.name }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
+                            {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr class="hidden-line-break">
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                    <hr class="hidden-line-break">
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:3 %}
+                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                    <hr class="hidden-line-break">
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 d-none d-xl-block mb-5">
+                                    <hr class="hidden-line-break">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="row">
+                        <div class="col text-center mt-3 mb-5">
+                            <h3>Like what you see?</h3>
+                            <h4>
+                                <a class="free-quote-button btn btn-lg rounded-3" href="{% url 'contact' %}">Let's work together!</a>
+                            </h4>
+                            <br>
+                            <br>
                         </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                        <div class="col-12 d-sm-none mb-5">
-                            <hr class="hidden-line-break">
-                        </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr class="hidden-line-break">
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr class="hidden-line-break">
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr class="hidden-line-break">
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="row">
-                    <div class="col text-center mt-3 mb-5">
-                        <h3>Like what you see?</h3>
-                        <h4>
-                            <a class="free-quote-button btn btn-lg rounded-3" href="{% url 'contact' %}">Let's work together!</a>
-                        </h4>
-                        <br>
-                        <br>
                     </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="product-container col-10 offset-1">
+                    <h3 class="text-center">No Results Found.</h3>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
