@@ -35,6 +35,10 @@ p {
     color: #1f1c1c !important;
 }
 
+.white-text {
+    color: #fff !important;
+}
+
 .dropdown-menu {
     background-color: #faf8f0;
 }
@@ -179,7 +183,6 @@ input[name='q']::placeholder {
 .homepage-text {
     font-size: 1.2em;
 }
-
 
 .homepage-subheader {
     font-size: 1.5em;

@@ -261,7 +261,38 @@ During the creation of add/edit functions on the Portfolio and Testimonials, an 
 
  - **Media and Static Files Not Loading**
 The second of the two post-deployment issues, when the Gitpod server was run all the media and static files no longer loaded after the Heroku deployment. At first, this was thought to be an issue with the `DISABLE_COLLECTSTATIC`, but this was not the case. Instead, it appeared to be a fault with the site attempting to load local files instead of the hosted AWS files. This was not the case on the Heroku site, so to fix the `USE_AWS` variable was added to the Gitpod environment. This solved the issue, however care was needed to ensure any changes made on local css files were pushed to AWS.
- 
+
+## Bugs Unable To Fix
+
+- **Product Page Pagination** -
+During the later stages of development, it was suggested pagination was implemented into the products page. This was done using the Paginator import in the products view. However, once implemented, this first threw up **UnorderedObjectListWarning: Pagination may yeild inconsistent results with an unordered object_list**. To counter this, the products object was set to order by the pk value, which stopped the error from appearing. However a bigger issue arose in that the page would no longer view properly, and would show raw code instead. Upon inspection it appeared the whole page had been placed in a "pre" block, which showed no errors in the terminal, or Chrome's DevTools. As this was a complementary feature implemented late into the project, it was decided that it would be removed for the time being. The code from the products views.py file can be viewed below:
+
+```
+from django.core.paginator import Paginator
+
+def all_products(request):
+
+    products = Product.objects.order_by('-pk').all()
+    categories = None
+    paginator = Paginator(products, 12)
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'products': products,
+        'current_categories': categories,
+    }
+
+    return render(request, 'products/products.html', {'page_obj': page_obj}, context) 
+```
+
 
 ## Browser Compatibility
 

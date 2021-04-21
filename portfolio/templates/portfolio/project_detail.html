@@ -25,7 +25,7 @@
                 <a href="{% url 'delete_project' project.id %}" class="btn btn-danger">Delete</a>
                 {% endif %}
             </div>
-            <div class="col-8 offset-2 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
+            <div class="col-12 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
                     {% if project.image %}
                         <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top img-fluid">
