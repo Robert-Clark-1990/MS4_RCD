@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 

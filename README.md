@@ -150,6 +150,8 @@ To realise the goals of the project, the following features were implemented:
 
 ### Contact Page
 
+A contact page was added [with thanks to LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form) to allow site users who wish to enquire about the site owner's services a quick and simple way of communication. At present, these emails post to the terminal, however this will be fixed to send emails properly when the site goes live, using a service such as [SendGrid](https://sendgrid.com/), [mailgun](https://www.mailgun.com/) or [Amazon's SES](https://aws.amazon.com/ses/) to complete the process.
+
 
 ## Future Features To Implement
 
@@ -341,6 +343,8 @@ def all_products(request):
 - Vertical Timeline from [Sanchit Sharma](https://codepen.io/web_designer_sanchit/pen/eLjvyw)
 
 - Animate Scroll Elements from [Dev Tips and Tricks](https://www.dev-tips-and-tricks.com/animate-elements-scrolled-view-vanilla-js)
+
+- Contact Form from [LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form)
 
 ### Acknowledgements
 

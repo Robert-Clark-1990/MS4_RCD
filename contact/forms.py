@@ -1,6 +1,7 @@
 from django import forms
 
 
+# Contact form thanks to LearnDjango.com - Link in README
 class ContactForm(forms.Form):
     email_address = forms.EmailField(
         help_text='Please provide a valid email address.', required=True)

@@ -33,3 +33,12 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['class'] = 'border-black \
                 rounded-5 profile-form-input'
             self.fields[field].label = False
+
+
+class ImageUploadForm(forms.ModelForm):
+    """
+    Form for purchasers of commission packages to upload images.
+    """
+    class Meta:
+        model = image_upload
+        fields = ('image', 'comments')

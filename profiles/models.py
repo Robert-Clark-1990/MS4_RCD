@@ -1,3 +1,5 @@
+from checkout.models import Order
+
 from django.db import models
 from django.contrib.auth.models import User
 from django_countries.fields import CountryField
@@ -41,3 +43,12 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
+
+
+class ImageUpload(models.Model):
+    user = models.CharField(max_length=254, null=False, blank=True)
+    images = models.ImageField(upload_to='user_images')
+    comments = models.TextField()
+
+    def __str__(self):
+        return self.user.username

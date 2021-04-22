@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from checkout.models import Order
+
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import UserProfile
-from. forms import UserProfileForm
-
-from checkout.models import Order
+from .models import UserProfile, ImageUpload
+from. forms import UserProfileForm, ImageUploadForm
 
 
 @login_required
@@ -53,3 +53,24 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def image_upload(request):
+    """
+    Process images uploaded by the user
+    """
+    if request.method == 'POST':
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            user = get_object_or_404(UserProfile, user=request.user)
+            image = form.cleaned_data.get("image")
+            comments = form.cleaned_data.get("comments")
+            ImageUpload.objects.create(user=user, image=image,
+                                       comments=comments)
+            messages.success(request, 'Image successfully uploaded!')
+            return redirect(reverse('profile'))
+        else:
+            messages.error(request, 'Oops. Something went wrong. \
+                Please try again.')
+    return redirect(reverse('profile'))
