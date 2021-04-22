@@ -29,7 +29,7 @@
         <br>
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form class="mb-5" method="POST" action="{% url 'contact' %}">
+                <form class="mb-5" method="POST">
                     {% csrf_token %}
                     <fieldset>                    
                         {{ contact_form|crispy }}

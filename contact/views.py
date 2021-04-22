@@ -1,36 +1,33 @@
-from django.shortcuts import render, HttpResponseRedirect
-from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, HttpResponseRedirect
 from .forms import ContactForm
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 
 
 def contact(request):
     """A view that allows potential customers to send an
     email message and then redirect to the contact page"""
 
-    if request.method == 'POST':
-        contact_form = ContactForm(request.POST)
-
-        if contact_form.is_valid():
-            messages.success(request, "Your message was sent successfully.\
-                Please allow up to 1 working week for a response.")
-
-            send_mail(
-                request.POST['email_address'],
-                request.POST['message'],
-                "Robert Clark Design",
-                ['robertclarkdesign@outlook.com'],
-                fail_silently=False,
-            )
-
-            return HttpResponseRedirect('contact')
-
-    else:
+    if request.method == 'GET':
         contact_form = ContactForm()
+    else:
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            subject = contact_form.cleaned_data['subject']
+            email_address = contact_form.cleaned_data['email_address']
+            message = contact_form.cleaned_data['message']
+            try:
+                send_mail(subject, message, email_address,
+                          ['admin@example.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('email_success')
+    return render(request, "contact/contact.html",
+                  {'contact_form': contact_form})
 
-    template = 'contact/contact.html'
-    context = {
-        'contact_form': contact_form
-    }
 
-    return render(request, template, context)
+def email_success(request):
+
+    template = 'contact/email_success.html'
+
+    return render(request, template)

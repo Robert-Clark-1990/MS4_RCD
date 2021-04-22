@@ -2,7 +2,9 @@ from django import forms
 
 
 class ContactForm(forms.Form):
-    Email_Address = forms.EmailField(
-        help_text='Please provide a valid email address.')
+    email_address = forms.EmailField(
+        help_text='Please provide a valid email address.', required=True)
+    subject = forms.CharField(required=True)
     message = forms.CharField(widget=forms.Textarea(attrs={'placeholder': '\
-        Please provide as much detail about your project as possible'}))
+        Please provide as much detail about your project as possible'}),
+                              required=True)
