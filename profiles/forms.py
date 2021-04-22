@@ -1,5 +1,5 @@
 from django import forms
-from .models import UserProfile
+from .models import UserProfile, ImageUpload
 
 
 class UserProfileForm(forms.ModelForm):
@@ -40,5 +40,5 @@ class ImageUploadForm(forms.ModelForm):
     Form for purchasers of commission packages to upload images.
     """
     class Meta:
-        model = image_upload
-        fields = ('image', 'comments')
+        model = ImageUpload
+        fields = ('image', 'title', 'comments')

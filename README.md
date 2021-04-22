@@ -346,6 +346,8 @@ def all_products(request):
 
 - Contact Form from [LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form)
 
+- Profile Accordion from [W3Schools](https://www.w3schools.com/howto/howto_js_accordion.asp)
+
 ### Acknowledgements
 
 - Thanks to **Precious Ijege** for his continued assistance as mentor.

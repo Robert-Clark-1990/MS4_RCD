@@ -1,0 +1,11 @@
+<div class="col-12 text-center">
+    <p class="mb-2 text-black">Please use this form to update your delivery information.</p>
+</div>
+<div class="col-12 col-md-10 offset-md-1">
+    <form action="{% url 'profile' %}" class="mt-3" method="POST" id="profile-update-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn form-button rounded-5 mx-auto">Update Info</button>
+    </form>
+    <br>
+</div>

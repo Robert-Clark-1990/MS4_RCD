@@ -27,11 +27,15 @@ def profile(request):
         form = UserProfileForm(instance=profile)
 
     orders = profile.orders.all()
+    image_form = ImageUploadForm
+    commission_photos = ImageUpload.objects.filter(user=request.user)
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'image_form': image_form,
+        'comission_photos': commission_photos,
         'on_profile_page': True
     }
 
@@ -64,9 +68,10 @@ def image_upload(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
             user = get_object_or_404(UserProfile, user=request.user)
+            title = form.cleaned_data.get("title")
             image = form.cleaned_data.get("image")
             comments = form.cleaned_data.get("comments")
-            ImageUpload.objects.create(user=user, image=image,
+            ImageUpload.objects.create(user=user, title=title, image=image,
                                        comments=comments)
             messages.success(request, 'Image successfully uploaded!')
             return redirect(reverse('profile'))

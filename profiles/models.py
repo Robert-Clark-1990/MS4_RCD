@@ -1,5 +1,3 @@
-from checkout.models import Order
-
 from django.db import models
 from django.contrib.auth.models import User
 from django_countries.fields import CountryField
@@ -46,9 +44,15 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
 
 class ImageUpload(models.Model):
+    """
+    Upload images for use in commissions
+    """
     user = models.CharField(max_length=254, null=False, blank=True)
-    images = models.ImageField(upload_to='user_images')
+    title = models.CharField(max_length=254)
+    image = models.ImageField(upload_to='user_images')
+    upload_image_file_path = models.CharField(
+        max_length=254, default="not found")
     comments = models.TextField()
 
     def __str__(self):
-        return self.user.username
+        return self.title

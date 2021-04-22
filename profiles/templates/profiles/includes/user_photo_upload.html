@@ -1,0 +1,50 @@
+<div class="col-12 text-center mb-2">
+    <p class="text-black text-bold">If you have purchased a commission package, please upload your photos here.</p>
+    <i class="text-black">Please note, only one piece of artwork will be completed. Uploaded images are for reference only. 
+        If you wish to commission multiple works of art you will need to purchase a separate commissions package.</i>
+</div>
+<br>
+<div class="col-12 col-md-10 offset-md-1">
+    <div class="row">
+        {% for photo in commission_photos %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 border-0">
+                    <img class="card-img-top img-fluid" src="/user_images/{{ photo.image }}" alt="{{ photo.title }}">
+                    <div class="card-body pb-0">
+                        <p class="mb-0 text-left font-weight-bold">£{{ photo.comments }}</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr class="hidden-line-break">
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr class="hidden-line-break">
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr class="hidden-line-break">
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr class="hidden-line-break">
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form method="POST" action="{% url 'image_upload' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ image_form|crispy }}
+                <button class="btn form-button rounded-5" type="submit"><i class="fas fa-arrow-circle-up"></i> Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
