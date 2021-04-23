@@ -4,9 +4,20 @@
     </span>
     <span>Keep Shopping</span>
 </a>
-<a href="{% url 'checkout' %}" class="btn form-button btn-lg mt-2">
-    <span>Secure Checkout</span>
-    <span class="icon">
-        <i class="fas fa-lock"></i>
-    </span>
-</a>
+{% if request.user.is_authenticated %}
+    <a href="{% url 'checkout' %}" class="btn form-button btn-lg mt-2">
+        <span>Secure Checkout</span>
+        <span class="icon">
+            <i class="fas fa-lock"></i>
+        </span>
+    </a>
+{% else %}
+    <a href="{% url 'account_login' %}" class="btn form-button btn-lg mt-2">
+        <span>Login to Checkout </span>
+        <span class="icon">
+            <i class="fas fa-user-plus"></i>
+        </span>
+    </a>
+    <br>
+    <small>You must sign in to checkout. If you don't have an account, <a href="{% url 'account_signup' %}">click here.</a></small>
+{% endif %}
