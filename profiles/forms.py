@@ -38,7 +38,10 @@ class UserProfileForm(forms.ModelForm):
 class ImageUploadForm(forms.ModelForm):
     """
     Form for purchasers of commission packages to upload images.
+    Thanks to cgpalmer for his help with the image upload
+    functionality - Link in README
     """
     class Meta:
         model = ImageUpload
         fields = ('image', 'title', 'comments')
+

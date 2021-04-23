@@ -330,6 +330,8 @@ def all_products(request):
 
 ### Media
 
+- All media and designs created by the developer, [Robert Clark](https://github.com/Robert-Clark-1990).
+
 ### Code
 
 - Image Modal from [W3Schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_image_modal_js)
@@ -347,6 +349,8 @@ def all_products(request):
 - Contact Form from [LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form)
 
 - Profile Accordion from [W3Schools](https://www.w3schools.com/howto/howto_js_accordion.asp)
+
+- Image Upload functionality with help from [cgpalmer](https://github.com/cgpalmer/ms4/tree/master/profiles)
 
 ### Acknowledgements
 

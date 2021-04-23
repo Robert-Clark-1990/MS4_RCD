@@ -11,7 +11,9 @@ from. forms import UserProfileForm, ImageUploadForm
 @login_required
 def profile(request):
     """
-    Display the user's profile
+    Display the user's profile, including options to edit
+    delivery information, view the order history, and upload
+    images for use in commissions.
     """
     profile = get_object_or_404(UserProfile, user=request.user)
 
@@ -43,6 +45,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    A view to review the history of user orders.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
@@ -62,7 +67,8 @@ def order_history(request, order_number):
 @login_required
 def image_upload(request):
     """
-    Process images uploaded by the user
+    Process images uploaded by the user. Thanks to cgpalmer for his help
+    with the image upload functionality - Link in README
     """
     if request.method == 'POST':
         form = ImageUploadForm(request.POST, request.FILES)

@@ -1,16 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django_countries.fields import CountryField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+
+from django_countries.fields import CountryField
 
 
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default deliverying
     information, order history, and allowing customers of
-    commissioned work to upload images and retrieve finished
-    work.
+    commissioned work to upload images.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(
@@ -45,7 +45,8 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
 class ImageUpload(models.Model):
     """
-    Upload images for use in commissions
+    Upload images for use in commissions. Thanks to cgpalmer for his help
+    with the image upload functionality - Link in README
     """
     user = models.CharField(max_length=254, null=False, blank=True)
     title = models.CharField(max_length=254)
