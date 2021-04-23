@@ -1,3 +1,18 @@
+/* Fade in animations for About page. Credit to div-tips-and-tricks.com - Link in README */
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+  }
+  
+  .fade-in-element {
+    animation: fade-in 1.4s;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+
 /* Timeline CSS from Codepen user Sanchit Sharma - Link in README */
 
 h4 {
@@ -56,7 +71,7 @@ h4 {
     width:10px;
     height:10px;
     top:24px;
-    right:-2px;
+    right:-6px;
     background:#9c020e;
     border-radius:50%;
     box-shadow:0 0 0 3px rgba(211, 43, 57, 0.2);
@@ -68,10 +83,10 @@ h4 {
     width:10px;
     height:10px;
     top:24px;
-    left:-2px;
-    background:rgb(34, 74, 253);
-    border-radius: 50%;
-    box-shadow:0 0 0 3px rgba(73, 100, 221, 0.2);
+    left:-4px;
+    background:#9c020e;
+    border-radius:50%;
+    box-shadow:0 0 0 3px rgba(211, 43, 57, 0.2);
 }
 
 .timeline ul li h3{
@@ -93,6 +108,9 @@ h4 {
 }
 
 .timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 12px;
+    right: -165px;
     margin:0;
     padding:8px 16px;
     background:#9c020e;
@@ -102,12 +120,15 @@ h4 {
 }
 
 .timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top:12px;
+    left:-165px;
     margin:0;
     padding:8px 16px;
-    background:rgb(34, 74, 253);
+    background:#9c020e;
     color:#fff !important;
     border-radius:18px;
-    box-shadow:0 0 0 3px rgba(73, 100, 221, 0.2);
+    box-shadow:0 0 0 3px rgba(211, 43, 57, 0.2);
 }
 
 @media(max-width:1000px) {

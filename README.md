@@ -82,7 +82,7 @@ into a portfolio of my work and a place where I can sell my design and developme
 | 16  | Site Owner   | Showcase a portfolio of work which can be changed or removed through the site                   |
 | 17  | Site Owner   | Showcase testimonials from previous customers which can be removed through the site             |
 | 18  | Site Owner   | Display an about the designer section to humanise the work and encourage users to commit        |
-| 19  | Site Owner   | Invite customers to write a testimonial upon project completion and have it display on the site |
+| 19  | Site Owner   | Invite customers to write a testimonial upon project completion to display on the site          |
 | 20  | Site Owner   | Add, edit, view and delete items in the shop all through the site                               |
 
 

@@ -25,74 +25,150 @@
         <div class="container h-100">
             <div class="row h-100 justify-content-center mt-5">
                 <div class="col-12 col-md-10">
-                    <p class="text-center">Hi there, I'm Rob, a Yorkshire born Self-Published Author, Graphic Design Artist and Software Developer.</p>
+                    <p class="text-center">Hi there, I'm Rob, a Yorkshire born Self-Published Author, Graphic Design Artist and Software Developer. But that only scratches the surface
+                      of my life, so I've put together a nifty timeline that showcases some of the highlights of my career.
+                    </p>
                 </div>
-                <div class="timeline">
-                    <ul>
-                      <li>
-                        <div class="time">
-                          <span class="p-2">He Writes</span>
-                          <span><i class="fas fa-pencil-alt"></i></span>                
-                        </div>
-                        <div class="content">
-                            <p>I completed a Masters Degree in Creative Writing in 2013 at the University of Salford, and have since gone on to publish 10 novels, with another 4 in development, 
-                                all of which review 5-star reviews on Amazon. When I'm not using my talents to tell tales, I've put my creative side towards adverts, press releases, brochures, and much more.
-                                <br>
-                                <br>
-                                <a href="http://robertclarkauthor.com/" class="form-button btn rounded-5">View literary work here.</a>
-                            </p>
-                        </div>
-                      </li>
-                      
-                      <li>
-                        <div class="time">
-                          <span><i class="fas fa-paint-brush"></i></span>
-                          <span class="p-2">He Designs</span>
-                        </div>
-                        <div class="content">
-                            <p>I've been designing since I could hold a pencil. While other kids were out playing football, I was teaching myself Adobe Photoshop. Everything I know about designing, I've taught myself
-                                and the proof is in the work. My customers always love the work I create for them.
-                                <br>
-                                <br>
-                                <a href="{% url 'testimonials' %}" class="form-button btn rounded-5">See what people think of my work here.</a>
-                            </p>
-                        </div>
-                      </li>
-                      
-                      <li>
-                        <div class="time">
-                          <span class="p-2">He Markets</span>
-                          <span><i class="far fa-lightbulb"></i></span>
-                        </div>
-                        <div class="content">
-                            <p>In 2016, I completed a Diploma in Digital Marketing. I've worked with musicians, Youtubers, and companies big and small, creating marketing strategies, 
-                                PR opportunities, promotional material, and much more.
-                                <br>
-                                <br>
-                                <a href="{% url 'portfolio' %}" class="form-button btn rounded-5">See some of my clients here.</a>
-                            </p>
-                        </div>
-                      </li>
-                      
-                      <li>
-                        <div class="time">
-                          <span><i class="fas fa-laptop-code"></i></span>
-                          <span class="p-2">He Codes</span>
-                        </div>
-                        <div class="content">
-                            <p>In 2021, I completed a Diploma in Software Development, gaining knowledge in HTML, CSS, JavaScript, Python and Django. I built this website, in case you wanted proof. 
-                                I'm available to work on any development projects you may have, so if you're interested, please get in touch!
-                                <br>
-                                <br>
-                                <a href="https://github.com/Robert-Clark-1990" class="form-button btn rounded-5">View my Github here.</a>
-                            </p>
-                        </div>
-                      </li>
-                      <div style="clear:both;"></div>
-                    </ul>
-                  </div>
 
-                <div class="col-12 col-md-10 mb-5">
+                <div class="timeline fade-in-element">
+                  <ul>
+                    <li>
+                      <div class="content">
+                        <h3>Diploma in Software Development</h3>
+                        <p>
+                          In 2021, I completed a Diploma in Software Development with the Code Institute. During this time, I expanded my knowledge in HTML5, CSS3, JavaScript
+                          Python, MongoDB, Django, Bootstrap, JQuery and MySQL.
+                          <br>
+                          The course was marked across 4 projects: User Centric Frontend Development, Interactive Frontend Development, Backend Development and Full Stack Frameworks. 
+                          This website formed my final project, in case you were curious. You can view all my work and projects on my GitHub page via the link below:
+                        </p>
+                        <br>
+                        <a href="https://github.com/Robert-Clark-1990" class="form-button btn rounded-5">
+                          <span><i class="fab fa-github"></i> Github</span></a>
+                      </div>
+                      <div class="time">
+                        <h4>2020 - 2021</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="content">
+                        <h3>The James Stone thriller series</h3>
+                        <p>
+                          Throughout the year of 2020, I released 4 novels continuing the James Stone series: The Killing Business, The Glorious Dead, The Damned and The Buried,
+                          and Ricochet, bringing the total number of books I have self-published up to 10. For all these novels, I have done everything myself, including editing, 
+                          cover design, marketing and promotion.
+                          <br>
+                          You can find out more about these books on my author website.
+                        </p>
+                        <br>
+                        <a href="http://robertclarkauthor.com/" class="form-button btn rounded-5">
+                          <span><i class="fas fa-pencil-alt"></i> Author Website</span></a>
+                      </div>
+                      <div class="time">
+                        <h4>2015 - 2020</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="content">
+                        <h3>The Wilf Ward Family Trust</h3>
+                        <p>Across 2019 and 2020, I worked as a Marketing Officer with Yorkshire-based organisation, The Wilf Ward Family Trust. During this time, I rebuilt their
+                          brand from the ground up, unifying their message across all of their offices and ventures. This required the recreation of effective brand guidelines with
+                          a greater focus on their Yorkshire roots, procedures for recruitment marketing and social media advertising, and much more.
+                          <br>
+                          You can read more about my work with The Wilf Ward Family Trust via the link below.
+                        </p>
+                        <br>
+                        <a href="/portfolio/{{1}}" class="form-button btn rounded-5">
+                          <span><i class="fas fa-users"></i> The Wilf Ward Family Trust</span></a>
+                      </div>
+                      <div class="time">
+                        <h4>2019 - 2020</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="content">
+                        <h3>Chameleon Music Marketing</h3>
+                        <p>
+                          Working freelance with music marketing service, Chameleon Music Marketing, I worked with clients all across the music industry, 
+                          handling a wide array of marketing, PR and social media tasks. Working with approximately five shows per week on a three month schedule, 
+                          it was my job to liaise with the marketing managers at each venue to create tailored plans, as well as working with media contacts such as the BBC and 
+                          ITV to arrange interviews and competitions.
+                          <br>
+                          You can read more about Chameleon Music Marketing via the link below.
+                        </p>
+                        <br>
+                        <a href="https://www.chameleonmusicmarketing.co.uk/" class="form-button btn rounded-5">
+                          <span><i class="fas fa-guitar"></i> Chameleon Music Marketing</span></a>
+                      </div>
+                      <div class="time">
+                        <h4>2017 - 2018</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="content">
+                        <h3>Diploma in Digital Marketing</h3>
+                        <p>
+                          During my time at Yorkshire Coast Homes, I completed a CAM Diploma in Digital Marketing with the Home Learning College. This proved pivotal in my
+                          decision to move into a self-employed marketing and design role, during which I have worked with a wide array of clients, including an award-winning 
+                          indie band, podcasters and comedians, healthcare providers and music marketing services.
+                          <br>
+                          You can read more about some of my clients via the link below.
+                        </p>
+                        <br>
+                        <a href="{% url 'portfolio' %}" class="form-button btn rounded-5">
+                          <span><i class="fas fa-bullhorn"></i> Portfolio</span></a>
+                      </div>
+                      <div class="time">
+                        <h4>2015 - 2016</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="content">
+                        <h3>Coastcall Independent Living</h3>
+                        <p>In 2013, I began work as an Admin Assistant Apprentice in the Coastcall department at Yorkshire Coast Homes. During this time I developed skills in
+                          finance software, database management, marketing, research and promotion. I went on to achieve full employment in 2014, and went on to redesign the Coastcall
+                          team's brand, creating posters and brochures, along with a company mascot. I was elected to plan and design the company website, which launched in 2017.
+                        </p>
+                        <br>
+                        <a href="https://beyondhousing.co.uk/independent-living/coastcall/" class="form-button btn rounded-5">
+                          <span><i class="fas fa-house-user"></i> Coastcall</span>
+                        </a>
+                      </div>
+                      <div class="time">
+                        <h4>2013 - 2017</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="content">
+                        <h3>Masters Degree in Creative Writing</h3>
+                        <p>
+                          In 2012, I began my studies for my Masters Degree in Creative Writing at the University of Salford. This course taught me to look critically at my work, 
+                          and to give and receive constructive feedback to and from peers. I have found this to be invaluable not only in reflecting on and improving my performance, 
+                          but also in being able to communicate effectively and supportively with others on matters that might potentially be taken as criticism.
+                          <br>
+                          It was during this time that I came up with the idea of James Stone, which has since gone on to become a globe-trotting action thriller book series. You can
+                          read more about these books via my author website below.
+                        </p>
+                        <br>
+                        <a href="http://robertclarkauthor.com/" class="form-button btn rounded-5">
+                          <span><i class="fas fa-pencil-alt"></i> Author Website</span></a>
+                      </div>
+                      <div class="time">
+                        <h4>2012 - 2013</h4>
+                      </div>
+                    </li>
+                         
+                    <div style="clear:both;"></div>
+                  </ul>
+                </div>
+
+                <div class="col-12 col-md-10 mt-2 mb-5">
                     <p class="text-center">
                       This combination of skills has made me an invaluable asset to any business looking for someone who can carry their vision. 
                     </p>
