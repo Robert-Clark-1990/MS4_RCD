@@ -37,10 +37,11 @@
                                     </div> 
                                 </div>
                             </div>
+                            <br>
                             {% if request.user.is_superuser %}
-                                <small class="ml-3">
-                                    <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a>
-                                </small>
+                                <div class="text-center">
+                                    <a class="form-button btn btn-sm" href="{% url 'edit_testimonial' testimonial.id %}">Edit</a>
+                                </div>
                             {% endif %}
                         </div>
                         

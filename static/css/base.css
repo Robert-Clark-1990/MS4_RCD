@@ -274,7 +274,7 @@ input[name='q']::placeholder {
 
 .image-container img {
 	display: block;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -333,6 +333,10 @@ input[name='q']::placeholder {
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
+}
+
+.edit-button {
+    z-index: 99999;
 }
 
 /* -------------------------------------------- Allauth form formatting */
