@@ -16,7 +16,6 @@ def portfolio(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "No results found")
                 return redirect(reverse('portfolio'))
 
             queries = Q(name__icontains=query) | Q(

@@ -136,6 +136,10 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
+.toast-body {
+    background-color: #faf8f0;
+}
+
 /* from CSS-tricks.com. Link in README */
 .arrow-up {
     width: 0; 
@@ -184,6 +188,27 @@ input[name='q']::placeholder {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.close {
+    position: sticky;
+    z-index: 999999999;
+    top: 30px;
+    right: 35px;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+}
+
+
+.close:hover,
+.close:focus {
+    color: rgb(199, 198, 198);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* ----------------------------------------------------- Index Page */

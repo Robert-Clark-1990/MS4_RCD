@@ -56,25 +56,6 @@
     to {transform: scale(1)}
 }
 
-.close {
-    position: sticky;
-    z-index: 999999999;
-    top: 30px;
-    right: 35px;
-    float: right;
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 1px 0 #fff;
-}
-
-.close:hover,
-.close:focus {
-    color: rgb(105, 105, 105);
-    text-decoration: none;
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 700px){
     .modal-content {
         width: 100%;
