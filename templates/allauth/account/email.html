@@ -8,7 +8,7 @@
 
   <h2 class="text-center">{% trans "E-mail Addresses" %}</h2>
   <hr>
-    
+  <div class="row justify-content-center"> 
     {% if user.emailaddress_set.all %}
     <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
 
@@ -56,11 +56,11 @@
             <button class="btn form-button rounded-5" name="action_add" type="submit">{% trans "Add E-mail" %}</button>
         </form>
       {% endif %}
-
-    <hr>
-    <div class="row justify-content-md-center">
-        <a href="{% url 'home' %}" class="btn form-button rounded-5">Home</a>
-    </div>
+  </div>
+  <hr>
+  <div class="row justify-content-md-center">
+      <a href="{% url 'home' %}" class="btn form-button rounded-5">Home</a>
+  </div>
 
 {% endblock %}
 
