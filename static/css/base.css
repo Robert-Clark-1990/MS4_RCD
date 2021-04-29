@@ -338,6 +338,7 @@ input[name='q']::placeholder {
 
 .upload-image {
     max-width: 100px;
+    height: auto;
 }
 
 /* -------------------------------------------- Allauth form formatting */

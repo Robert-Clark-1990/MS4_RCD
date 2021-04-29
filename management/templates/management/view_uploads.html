@@ -50,6 +50,20 @@
                                     </td>
                                     <td class="small"><strong>{{ upload.user }}</strong></td>
                                     <td class="small">{{ upload.comments }}</td>
+                                    <td>
+                                        <a href="/media/{{ upload.image }}" class="btn btn-sm form-button rounded-circle" download>
+                                            <span>
+                                                <i class="fas fa-download"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'delete_photo' upload.id %}" class="btn btn-sm btn-danger rounded-circle">
+                                            <span>
+                                                <i class="fas fa-trash"></i>
+                                            </span>
+                                        </a>
+                                    </td>
                                 </tr>
                             {% endfor %}
                         </tbody>

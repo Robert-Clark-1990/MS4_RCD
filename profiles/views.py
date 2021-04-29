@@ -85,3 +85,10 @@ def image_upload(request):
             messages.error(request, 'Oops. Something went wrong. \
                 Please try again.')
     return redirect(reverse('profile'))
+
+
+def delete_photo(request, photo_id):
+    photo = get_object_or_404(ImageUpload, pk=photo_id)
+    photo.delete()
+    messages.success(request, 'Deleted Photo')
+    return redirect(reverse('profile'))
