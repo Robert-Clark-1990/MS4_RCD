@@ -100,7 +100,9 @@ In order to draw focus to the work in the portfolio, the site will have a clean,
 
 ### Colour Scheme
 
-In keeping with the site logo, vibrant primary colours will be used alongside a white background to draw attention to the work. However, the site will not be limited to the use of primary colours and will expand where necessary to encourage site users to view everything the site has to offer.
+![Primary Colours](documents/images/primary_colours.png)
+
+In keeping with the site logo, a vibrant primary red colour will be used alongside an off white background to draw attention to the work. However, the site will not be limited to the use of primary colours and will expand where necessary to encourage site users to view everything the site has to offer.
 
 ### Typography
 
@@ -212,7 +214,7 @@ The Order History page shown here is accessed through the Admin Management page.
 
 ### Uploaded Images Page
 
-`<-- TO FINISH -->`
+![Upload](documents/images/upload.png)
 
 The Uploaded Images page will give Admin users access to all uploaded images provided by customers of commission packages. Admin will be able to download these images at their discression for use in the commission works, and delete the images to prevent the media hosting from going over the free limitations. Once the order is complete, the site owner will send the finished product to the customer via email.
 
