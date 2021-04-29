@@ -43,9 +43,9 @@
                         <tbody>
                             {% for upload in uploads %}
                                 <tr>
-                                    <td>
-                                        <a href="{{ upload.upload_image_file_path }}" target="_blank">
-                                            <img class="w-100" src="{{ upload.image }}" alt="{{ upload.title }}">
+                                    <td> 
+                                        <a href="/media/{{ upload.image }}" target="_blank">
+                                            <img class="upload-image" src="/media/{{ upload.image }}" alt="{{ upload.title }}">
                                         </a>
                                     </td>
                                     <td class="small"><strong>{{ upload.user }}</strong></td>

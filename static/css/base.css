@@ -334,6 +334,12 @@ input[name='q']::placeholder {
     z-index: 99999;
 }
 
+/* -------------------------------------------- Admin Management Page */
+
+.upload-image {
+    max-width: 100px;
+}
+
 /* -------------------------------------------- Allauth form formatting */
 
 .allauth-form-inner-content p {
