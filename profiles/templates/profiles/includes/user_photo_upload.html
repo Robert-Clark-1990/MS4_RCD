@@ -6,16 +6,26 @@
 <br>
 <div class="col-12 col-md-10 offset-md-1">
     <div class="row">
+        <div class="col-12">
+            <form method="POST" action="{% url 'image_upload' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ image_form|crispy }}
+                <button class="btn form-button rounded-5" type="submit"><i class="fas fa-arrow-circle-up"></i> Upload</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
         {% for photo in commission_photos %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">
                     <img class="card-img-top img-fluid" src="/media/{{ photo.image }}" alt="{{ photo.title }}">
                     <div class="card-body pb-0">
-                        <p class="mb-0 text-left font-weight-bold">£{{ photo.comments }}</p>
+                        <p class="mb-0 text-left small">{{ photo.comments }}</p>
                         <br>
                     </div>
                     <div class="text-center">
-                        <a href="{% url 'delete_photo' photo.id %}" class="btn btn-sm btn-danger rounded-5 col-12 col-md-6">
+                        <a href="" class="btn btn-sm btn-danger rounded-5 col-12 col-md-6">
                             <span>Delete Photo <i class="fas fa-trash-alt"></i></span></a>
                     </div>
                 </div>
@@ -41,14 +51,5 @@
                 </div>
             {% endif %}
         {% endfor %}
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <form method="POST" action="{% url 'image_upload' %}" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ image_form|crispy }}
-                <button class="btn form-button rounded-5" type="submit"><i class="fas fa-arrow-circle-up"></i> Upload</button>
-            </form>
-        </div>
     </div>
 </div>

@@ -37,7 +37,7 @@ def profile(request):
         'form': form,
         'orders': orders,
         'image_form': image_form,
-        'comission_photos': commission_photos,
+        'commission_photos': commission_photos,
         'on_profile_page': True
     }
 
