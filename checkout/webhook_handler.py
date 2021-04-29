@@ -1,9 +1,10 @@
-from django.http import HttpResponse
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
 from django.conf import settings
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 from .models import Order, OrderLineItem
+
 from products.models import Product
 from profiles.models import UserProfile
 
@@ -43,7 +44,7 @@ class StripeWH_Handler:
         Handle a generic/unknown/unexpected webhook event
         """
         return HttpResponse(
-            content=f'Unhandled webhook recieved: {event["type"]}',
+            content=f'Unhandled webhook received: {event["type"]}',
             status=200)
 
     def handle_payment_intent_succeeded(self, event):
@@ -82,6 +83,7 @@ class StripeWH_Handler:
 
         order_exists = False
         attempt = 1
+        # if order not found within 5 attempts, it is created
         while attempt <= 5:
             try:
                 order = Order.objects.get(
