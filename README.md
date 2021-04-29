@@ -26,6 +26,7 @@
 
  - [**Testing**](#testing)
     - [Bug Fixes](#bug-fixes)
+    - [Bugs Unable To Fix](#bugs-unable-to-fix)
     - [Browser Compatibility](#browser-compatibility)
     - [Responsive Design](#responsive-design)
     - [Validator Tests](#validator-tests)
@@ -45,7 +46,7 @@
 
 # Introduction
 
-`<-- INSERT SITE IMAGE -->`
+![Robert Clark Design](documents/images/rcd-main.png)
 
 For the final project in the Code Institute course, I wanted to create something personal and important to me and my future as a Software Developer. I have been a hugely creative individual
 my whole life, and have worked in the past as a freelance Graphic Designer and Digital Marketer through the moniker of **Robert Clark Design**. I decided that I wanted to build this final project 
@@ -57,33 +58,30 @@ into a portfolio of my work and a place where I can sell my design and developme
 
 ## Project Goals
 
-**Robert Clark Design** is a full stack website that showcases a portfolio of design and development projects. The purpose is to demonstrate the work and skillset of the site user in an inviting and stylish way in order to encourage site visitors to request and purchase an array of available products, or purchase a commission package. Once a user has purchased a product, they will be able to log in via the email and password and view their order history, or if they purchased a commission package, they will be able to upload images for reference, and view the status of their work. The site owner will be able to upload the finished product via the website, which the customer will then be able to either accept or request a round of changes. Once the customer has accepted, they will be invited to leave a testimonial which will display on the site.
+**Robert Clark Design** is a full stack website that showcases a portfolio of design and development projects. The purpose is to demonstrate the work and skillset of the site user in an inviting and stylish way in order to encourage site visitors to request and purchase an array of available products, or purchase a commission package. Once a user has purchased a product, they will be able to log in via the email and password and view their order history, or if they purchased a commission package, they will be able to upload images for reference. The site owner will be able to access uploaded images for the commission. Once the commission is complete, the customer will be invited to leave a testimonial which will display on the site.
 
 
 ## User Stories
 
-| ID  |   As A       |  I want to be able to...                                                                        |
-| --- | :----------  | :---------------------------------------------------------------------------------------------- |
-| 01  | Site User    | Quickly and easily understand the purpose of the site                                           |
-| 02  | Site User    | View a list of products & services available                                                    |
-| 03  | Site User    | View individual products & services                                                             |
-| 04  | Site User    | Sort for products & services that fit my requirements                                           |
-| 05  | Site User    | Select products & services I want and add them to my basket                                     |
-| 06  | Site User    | Easily view the total cost of my purchases at any time                                          |
-| 07  | Site User    | Order prepackaged services such as commissioned artwork and receive an automated quote          |
-| 08  | Site User    | Add additional information to inform designer on project requirements                           |
-| 09  | Site User    | Easily locate an inbuilt contact form to request quotes on unique projects                      |
-| 10  | Site User    | Pay for services via an inbuilt payment service                                                 |
-| 11  | Site User    | Sign in as a customer to view status of project                                                 |
-| 12  | Site User    | View the completed work, accept the result or request a round of changes                        |
-| 13  | Site User    | Download completed work and share it on Social Media                                            |
-| 14  | Site Owner   | Log in as a special user and view a list of all orders                                          |
-| 15  | Site Owner   | Handle the customer request and upload of completed work all through the site                   |
-| 16  | Site Owner   | Showcase a portfolio of work which can be changed or removed through the site                   |
-| 17  | Site Owner   | Showcase testimonials from previous customers which can be removed through the site             |
-| 18  | Site Owner   | Display an about the designer section to humanise the work and encourage users to commit        |
-| 19  | Site Owner   | Invite customers to write a testimonial upon project completion to display on the site          |
-| 20  | Site Owner   | Add, edit, view and delete items in the shop all through the site                               |
+|   As A       |  I want to be able to...                                                                        |
+| :----------  | :---------------------------------------------------------------------------------------------- |
+| Site User    | Quickly and easily understand the purpose of the site                                           |
+| Site User    | View a list of products & services available                                                    |
+| Site User    | View individual products & services                                                             |
+| Site User    | Sort for products & services that fit my requirements                                           |
+| Site User    | Select products & services I want and add them to my basket                                     |
+| Site User    | Easily view the total cost of my purchases at any time                                          |
+| Site User    | Add additional information to inform designer on project requirements                           |
+| Site User    | Easily locate an inbuilt contact form to request quotes on unique projects                      |
+| Site User    | Pay for services via an inbuilt payment service                                                 |
+| Site User    | Sign in as a customer to view order history and upload commission images                        |
+| Site Owner   | Log in as a special user and view a list of all orders and uploaded images                      |
+| Site Owner   | Handle the customer request and upload of images all through the site                           |
+| Site Owner   | Showcase a portfolio of work which can be changed or removed through the site                   |
+| Site Owner   | Showcase testimonials from previous customers which can be added to or removed through the site |
+| Site Owner   | Display an about the designer section to humanise the work and encourage users to commit        |
+| Site Owner   | Invite customers to write a testimonial upon project completion to display on the site          |
+| Site Owner   | Add, edit, view and delete items in the shop all through the site                               |
 
 
 ## Wireframes
@@ -91,7 +89,9 @@ into a portfolio of my work and a place where I can sell my design and developme
 In order to visualise the project before creation, a series of wireframes were created. These outlined the basic structure of the site and the individual page layouts. Over the course of
 the project, the designs evolved to meet the expanded scope, however the basic structure and design remained intact. 
 
-`<-- INSERT WIREFRAME IMAGES AND PDF LINK -->`
+![Wireframes](documents/images/wireframes.png)
+
+You can download a pdf of the wireframes [here](documents/wireframes.pdf)
 
 
 ## Site Design
@@ -113,6 +113,8 @@ A strong focus on geometric design was used throughout the site, showcasing the 
 
 ## Database Design
 
+`<-- TO FINISH ONCE IMAGE UPLOAD BIT SORTED SO I KNOW WHAT IS IN THE SCHEMA -->`
+
 All data related to this project is saved in JSON files across three apps. The Portfolio app is separated from the rest as it contains data from previous works, and would only be updated with new information if a new client was taken on. The Products app contains JSON files for Products and Categories. Users who purchase a commission package will then be invited to leave a testimonial, which will bring forward data to be used in the Testimonials app.
 The model below was created using [Draw SQL](https://drawsql.app/rob-clark/diagrams/rcd)
 
@@ -130,25 +132,71 @@ To realise the goals of the project, the following features were implemented:
 
 ### Home Page 
 
+![Homepage](documents/images/home.png)
+
+Adhering to a simplistic and stylistic design, the homepage welcomes users with a series of easily accessible links to the contact page, portfolio page, shop page, testimonials page and about page. Each section is accompanied with a circular image or gif and a brief description of the page.
+
 ### About Page
+
+![About](documents/images/about.png)
+
+Acting as part introduction and part CV, the about section details the site owner's background with career highlights, all provided in a stylish vertical timeline. Links in each section allow the user to persue pages both internally and externally.
 
 ### Portfolio Page
 
-### Individual Project Page
+![Portfolio](documents/images/portfolio.png)
+
+### Project Detail Page
+
+![Project_detail](documents/images/project_detail.png)
 
 ### Testimonials Page
 
+![Testimonials](documents/images/testimonials.png)
+
 ### Store Page
+
+![Shop](documents/images/shop.png)
+
+### Product Detail Page
+
+![Product_detail](documents/images/product_detail.png)
 
 ### Shopping Bag Page
 
+![Bag](documents/images/bag.png)
+
 ### Checkout Page
 
-### Log In Page
+![Checkout](documents/images/checkout.png)
 
-### Customer Project Page
+### Sign In Page
+
+![signin](documents/images/signin.png)
+
+### Profile Page
+
+![Profile](documents/images/profile.png)
+
+### Admin Management Page
+
+![Management](documents/images/management.png)
+
+### Order History Page
+
+![Order_history](documents/images/order_history.png)
+
+### Uploaded Images Page
+
+`<-- TO FINISH -->`
+
+### Add Product / Project / Testimonial Page(s)
+
+![add_product](documents/images/add_product.png)
 
 ### Contact Page
+
+![Contact](documents/images/contact.png)
 
 A contact page was added [with thanks to LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form) to allow site users who wish to enquire about the site owner's services a quick and simple way of communication. At present, these emails post to the terminal, however this will be fixed to send emails properly when the site goes live, using a service such as [SendGrid](https://sendgrid.com/), [mailgun](https://www.mailgun.com/) or [Amazon's SES](https://aws.amazon.com/ses/) to complete the process.
 
