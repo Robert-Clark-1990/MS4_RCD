@@ -226,7 +226,7 @@ Add, Edit and Delete functionality for products, projects and tesitmonials can b
 
 ![Contact](documents/images/contact.png)
 
-A contact page was added [with thanks to LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form) to allow site users who wish to enquire about the site owner's services a quick and simple way of communication.
+A contact page was added [with thanks to LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form) to allow site users who wish to enquire about the site owner's services a quick and simple way of communication. While this project is in development, this contact form will only deliver emails to the terminal. However, once the site is set to go live, a service such as [SendGrid](https://sendgrid.com/), [Mailgun](https://www.mailgun.com/) or [SES](https://aws.amazon.com/ses/) will be used to handle actual emails.
 
 
 ## Future Features To Implement
@@ -235,7 +235,7 @@ A contact page was added [with thanks to LearnDjango.com](https://learndjango.co
 
 * Site users can sign in and create an account using their social media accounts such as Facebook or Instagram. This would allow a more seemless integration for users to register an account and share work upon completion.
 
-* Originially it was the intention that commission packages would be handled entirely through the website, with users able to upload their images, and view the status of their project before it is complete. Then they would be able to request any changes made via the site, before downloading the finished project all through the site. However as the project overran the intended deadline, this feature was paired down to just the image upload function, with the rest of the customer relationship being handled via email.
+* Originially it was the intention that commission packages would be handled entirely through the website, with users able to upload their images, and view the status of their project before it is complete. Then they would be able to request any changes made via the site, before downloading the finished project all through the site. However, as the project overran the intended deadline, this feature was paired down to just the image upload function, with the rest of the customer relationship being handled via email.
 
 ---
 
