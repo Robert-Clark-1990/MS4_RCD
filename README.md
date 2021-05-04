@@ -130,8 +130,6 @@ The model below was created using [Draw SQL](https://drawsql.app/rob-clark/diagr
 
 To realise the goals of the project, the following features were implemented:
 
-`<-- TO FINISH -->`
-
 ### Home Page 
 
 ![Homepage](documents/images/home.png)
@@ -190,7 +188,7 @@ Once the user has completed the purchase and Stripe has successfully run the pay
 
 ### Sign In Page
 
-![signin](documents/images/signin.png)
+![Signin](documents/images/signin.png)
 
 All registration pages and login pages are handled with Allauth, with templates tweaked to match the site style.
 
@@ -228,7 +226,7 @@ Add, Edit and Delete functionality for products, projects and tesitmonials can b
 
 ![Contact](documents/images/contact.png)
 
-A contact page was added [with thanks to LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form) to allow site users who wish to enquire about the site owner's services a quick and simple way of communication. At present, these emails post to the terminal, however this will be fixed to send emails properly when the site goes live, using a service such as [SendGrid](https://sendgrid.com/), [mailgun](https://www.mailgun.com/) or [Amazon's SES](https://aws.amazon.com/ses/) to complete the process.
+A contact page was added [with thanks to LearnDjango.com](https://learndjango.com/tutorials/django-email-contact-form) to allow site users who wish to enquire about the site owner's services a quick and simple way of communication.
 
 
 ## Future Features To Implement
@@ -242,8 +240,6 @@ A contact page was added [with thanks to LearnDjango.com](https://learndjango.co
 ---
 
 # Technologies Used
-
-`<-- TO FINISH -->`
 
 ## Languages
 
@@ -266,6 +262,55 @@ A contact page was added [with thanks to LearnDjango.com](https://learndjango.co
 
 ## APIS and Frameworks
 
+* [Bootstrap4](https://getbootstrap.com/)
+
+   Bootstrap was used to build the elements of the site.
+
+* [SQLite 3](https://www.sqlite.org/index.html)
+
+   SQLite was used for the site's databases.
+
+* [Postgres](https://www.postgresql.org/)
+
+   Postgres was used for database management.
+
+* [Stripe](https://stripe.com)
+
+   Stripe was used for payment handling.
+
+* [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+   Boto3 was used for AWS S3 management.
+
+* [DJ Database](https://pypi.org/project/dj-database-url/)
+
+   DJ Database was used for database url management.
+
+* [Django](https://www.djangoproject.com/)
+
+   Django was used for Python frameworks.
+
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/)
+
+   Allauth was used for account registration and management.
+
+* [Gunicorn](https://gunicorn.org/)
+
+   Gunicorn was used for server implementation.
+
+* [Pillow](https://pillow.readthedocs.io/en/stable/)
+
+   Pillow was used for image processing.
+
+* [Psycopg2](https://pypi.org/project/psycopg2/)
+
+   Psycopg2 was used as a Postgres database adapter.
+
+* [S3](https://aws.amazon.com/s3/)
+
+   S3 was used in conjunction with AWS for server storage.
+
+
 ## Hosting Databases and Version Control
 
 * [MongoDB](https://www.mongodb.com/)
@@ -284,7 +329,9 @@ A contact page was added [with thanks to LearnDjango.com](https://learndjango.co
 
    Heroku was used to deploy this site.
 
-* [AWS]
+* [AWS](https://aws.amazon.com/)
+
+   Amazon Web Services was used to host static and media files.
 
 ## Websites
 
@@ -344,6 +391,13 @@ During the creation of add/edit functions on the Portfolio and Testimonials, an 
  - **Media and Static Files Not Loading**
 The second of the two post-deployment issues, when the Gitpod server was run all the media and static files no longer loaded after the Heroku deployment. At first, this was thought to be an issue with the `DISABLE_COLLECTSTATIC`, but this was not the case. Instead, it appeared to be a fault with the site attempting to load local files instead of the hosted AWS files. This was not the case on the Heroku site, so to fix the `USE_AWS` variable was added to the Gitpod environment. This solved the issue, however care was needed to ensure any changes made on local css files were pushed to AWS.
 
+- **500 Server Error on Profile and Admin Management**
+As the project neared its end and was deployed to Heroku, some 500 server errors popped up on the Heroku page. The first of these issues came when a user tried to log in to their profile, or when a site admin clicked on the Uploaded Images page. It was clear that these issues were related, however it wasn't clear why they only appeared on Heroku, and not on Gitpod. Evenutally it was discovered that the reason for this was that Gitpod was not connected to Postgres, so the changes made there were not going through to Heroku. Once the DATABASE_URL had been exported once more, the ImageUpload model was able to be migrated to Heroku, thus solving this issue.
+
+- **500 Server Error on Signup**
+Following the fix of the previous 500 error, another issue arose when a site user attempted to signup. As emails were implemented late in development, after the previous server errors had arisen, it had been impossible to test if the emails were working beforehand. With a DEVELOPMENT variable added to Heroku's config vars, it was discovered that an account was being created, but that the emails were not being sent. Upon further review, this came down to a spelling error in the EMAIL_HOST in settings.py that said stmp, not smtp. With this fixed, the changes pushed, and the DEVELOPMENT variable removed from Heroku, emails were tested once more and now work as intended, both in the signup, and in the confirmation of orders.
+
+
 ## Bugs Unable To Fix
 
 - **Product Page Pagination** -
@@ -378,7 +432,70 @@ def all_products(request):
 
 ## Browser Compatibility
 
+This project was tested on all major web browsers to ensure it works as it is intended. The results can be seen below:
+
+|                   |  Safari |  Chrome |  Firefox |  Edge |  Opera |
+| :---------------  | :------ |:------- |:-------- |:----- |:------ |
+| Is it Compatable? |  Yes    |  Yes    |  Yes     |  Yes  |  Yes   |
+| Is it Responsive? |  Yes    |  Yes    |  Yes     |  Yes  |  Yes   |
+
 ## Responsive Design
+
+Using Google Chrome's Dev Tools, this project was tested to ensure it was optimised across all common devices. Each page was measured on the device sizes available on the Chrome Inspect tool, ensuring each rendered as intended, and that images, links and text were all visible and worked properly. As the screenshots in the **Existing Features** will attest, each page was scrutinised to ensure each feature was responsive and compatible. The results can be seen below:
+
+|                   | Moto G4 | Galaxy S5 | Pixel 2 | Pixel 2 XL | iPhone 5/SE | iPhone 6/7/8 | iPhone 6/7/8 Plus | iPhone X | iPad | iPad Pro | Surface Duo | Galaxy Fold |
+| :---------------  | :------ |:--------- |:------- |:---------- |:----------- |:------------ |:----------------- |:-------- |:---- |:-------- |:----------- |:----------- |
+| 404               | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| 500               | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| About             | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| About             | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Bag               | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| About             | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Checkout          | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Checkout Success  | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Contact           | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Email Success     | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Home              | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Management        | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Order History     | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| View Uploads      | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Portfolio         | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Project Detail    | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Add/Edit Project  | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Products          | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Product Detail    | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Add/Edit Product  | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Profile           | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Testimonials      | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+| Add/Edit Ttml     | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
+
+The same tests were conducted on different desktop screen sizes. The results can be seen below:
+
+|                   | <602px | <992px | <1200px | >1200px |
+| :---------------  | :----- |:------ |:------- |:------- |
+| 404               | Yes    | Yes    | Yes     | Yes     |
+| 500               | Yes    | Yes    | Yes     | Yes     |
+| About             | Yes    | Yes    | Yes     | Yes     |
+| About             | Yes    | Yes    | Yes     | Yes     |
+| Bag               | Yes    | Yes    | Yes     | Yes     |
+| About             | Yes    | Yes    | Yes     | Yes     |
+| Checkout          | Yes    | Yes    | Yes     | Yes     |
+| Checkout Success  | Yes    | Yes    | Yes     | Yes     |
+| Contact           | Yes    | Yes    | Yes     | Yes     |
+| Email Success     | Yes    | Yes    | Yes     | Yes     |
+| Home              | Yes    | Yes    | Yes     | Yes     |
+| Management        | Yes    | Yes    | Yes     | Yes     |
+| Order History     | Yes    | Yes    | Yes     | Yes     |
+| View Uploads      | Yes    | Yes    | Yes     | Yes     |
+| Portfolio         | Yes    | Yes    | Yes     | Yes     |
+| Project Detail    | Yes    | Yes    | Yes     | Yes     |
+| Add/Edit Project  | Yes    | Yes    | Yes     | Yes     |
+| Products          | Yes    | Yes    | Yes     | Yes     |
+| Product Detail    | Yes    | Yes    | Yes     | Yes     |
+| Add/Edit Product  | Yes    | Yes    | Yes     | Yes     |
+| Profile           | Yes    | Yes    | Yes     | Yes     |
+| Testimonials      | Yes    | Yes    | Yes     | Yes     |
+| Add/Edit Ttml     | Yes    | Yes    | Yes     | Yes     |
 
 ## Validator Tests
 
@@ -582,6 +699,8 @@ This guide assumes you are using Gitpod:
 
 ### Code
 
+- This project was built on the frameworks implemented in [Code Institute's Boutique Ado project](https://learn.codeinstitute.net/dashboard)
+
 - Image Modal from [W3Schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_image_modal_js)
 
 - Arrow Up CSS from [CSS-Tricks](https://css-tricks.com/snippets/css/css-triangle/)
@@ -605,3 +724,5 @@ This guide assumes you are using Gitpod:
 - Thanks to **Precious Ijege** for his continued assistance as mentor.
 
 - Thanks to the **Code Institute tutors** who were there in times of crisis to help guide this developer in the right direction.
+
+- Special thanks to tutor **Igor CI** for his help on all the projects worked on during the course.
