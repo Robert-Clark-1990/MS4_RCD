@@ -106,7 +106,7 @@ In keeping with the site logo, a vibrant primary red colour will be used alongsi
 
 ### Typography
 
-To match the minimalistic design of the site, the Google Font [Poppins](https://fonts.google.com/specimen/Poppins?preview.text=Robert%20Clark%20Design&preview.text_type=custom) was used. This font was selected to ensure user accessibility and readibility was always at the forefront of site design.
+To match the minimalistic design of the site, the Google Font [Poppins](https://fonts.google.com/specimen/Poppins?preview.text=Robert%20Clark%20Design&preview.text_type=custom) was used. This font was selected to ensure user accessibility and readability was always at the forefront of site design.
 
 ### Artwork
 
@@ -140,7 +140,7 @@ Adhering to a simplistic and stylistic design, the homepage welcomes users with 
 
 ![About](documents/images/about.png)
 
-Acting as part introduction and part CV, the about section details the site owner's background with career highlights, all provided in a stylish vertical timeline. Links in each section allow the user to persue pages both internally and externally.
+Acting as part introduction and part CV, the about section details the site owner's background with career highlights, all provided in a stylish vertical timeline. Links in each section allow the user to peruse pages both internally and externally.
 
 ### Portfolio Page
 
@@ -214,13 +214,13 @@ The Order History page shown here is accessed through the Admin Management page.
 
 ![Upload](documents/images/upload.png)
 
-The Uploaded Images page will give Admin users access to all uploaded images provided by customers of commission packages. Admin will be able to download these images at their discression for use in the commission works, and delete the images to prevent the media hosting from going over the free limitations. Once the order is complete, the site owner will send the finished product to the customer via email.
+The Uploaded Images page will give Admin users access to all uploaded images provided by customers of commission packages. Admin will be able to download these images at their discretion for use in the commission works, and delete the images to prevent the media hosting from going over the free limitations. Once the order is complete, the site owner will send the finished product to the customer via email.
 
 ### Add Product / Project / Testimonial Page(s)
 
 ![add_product](documents/images/add_product.png)
 
-Add, Edit and Delete functionality for products, projects and tesitmonials can be accessed via the Admin Management page, with edit and delete functionality for each also accessible via their designated pages. As these pages all have a similar design, they have been consolodated here.
+Add, Edit and Delete functionality for products, projects and tesitmonials can be accessed via the Admin Management page, with edit and delete functionality for each also accessible via their designated pages. As these pages all have a similar design, they have been consolidated here.
 
 ### Contact Page
 
@@ -233,9 +233,9 @@ A contact page was added [with thanks to LearnDjango.com](https://learndjango.co
 
 * The implementation of an inbuilt chat feature would add an extra layer of communication between site user and site owner. Users would be able to check in on the status of their project, and request minor changes easily.
 
-* Site users can sign in and create an account using their social media accounts such as Facebook or Instagram. This would allow a more seemless integration for users to register an account and share work upon completion.
+* Site users can sign in and create an account using their social media accounts such as Facebook or Instagram. This would allow a more seamless integration for users to register an account and share work upon completion.
 
-* Originially it was the intention that commission packages would be handled entirely through the website, with users able to upload their images, and view the status of their project before it is complete. Then they would be able to request any changes made via the site, before downloading the finished project all through the site. However, as the project overran the intended deadline, this feature was paired down to just the image upload function, with the rest of the customer relationship being handled via email.
+* Originally it was the intention that commission packages would be handled entirely through the website, with users able to upload their images, and view the status of their project before it is complete. Then they would be able to request any changes made via the site, before downloading the finished project all through the site. However, as the project overran the intended deadline, this feature was paired down to just the image upload function, with the rest of the customer relationship being handled via email.
 
 ---
 
@@ -386,13 +386,13 @@ During the creation of add/edit functions on the Portfolio and Testimonials, an 
  Once the project had been deployed to Heroku and the Static and Media files were stored on AWS, two issues arose the next time the project was opened on Gitpod. The first was this warning:
  `django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.`
  This came as a surprise as there had been no issues with the SECRET_KEY thus far, and the deployed Heroku version worked fine. To fix this, a env.py file was created to store the SECRET_KEY, and - surprisingly - the following was added to the settings.py file: `SECRET_KEY = os.environ.get('SECRET_KEY', 'some value if your key is not in the environment') `
- The error no longer appeared, and since it appears to be a Gitpod-side problem, there should be no forseeable issues in the future of the project.
+ The error no longer appeared, and since it appears to be a Gitpod-side problem, there should be no foreseeable issues in the future of the project.
 
  - **Media and Static Files Not Loading**
 The second of the two post-deployment issues, when the Gitpod server was run all the media and static files no longer loaded after the Heroku deployment. At first, this was thought to be an issue with the `DISABLE_COLLECTSTATIC`, but this was not the case. Instead, it appeared to be a fault with the site attempting to load local files instead of the hosted AWS files. This was not the case on the Heroku site, so to fix the `USE_AWS` variable was added to the Gitpod environment. This solved the issue, however care was needed to ensure any changes made on local css files were pushed to AWS.
 
 - **500 Server Error on Profile and Admin Management**
-As the project neared its end and was deployed to Heroku, some 500 server errors popped up on the Heroku page. The first of these issues came when a user tried to log in to their profile, or when a site admin clicked on the Uploaded Images page. It was clear that these issues were related, however it wasn't clear why they only appeared on Heroku, and not on Gitpod. Evenutally it was discovered that the reason for this was that Gitpod was not connected to Postgres, so the changes made there were not going through to Heroku. Once the DATABASE_URL had been exported once more, the ImageUpload model was able to be migrated to Heroku, thus solving this issue.
+As the project neared its end and was deployed to Heroku, some 500 server errors popped up on the Heroku page. The first of these issues came when a user tried to log in to their profile, or when a site admin clicked on the Uploaded Images page. It was clear that these issues were related, however it wasn't clear why they only appeared on Heroku, and not on Gitpod. Eventually it was discovered that the reason for this was that Gitpod was not connected to Postgres, so the changes made there were not going through to Heroku. Once the DATABASE_URL had been exported once more, the ImageUpload model was able to be migrated to Heroku, thus solving this issue.
 
 - **500 Server Error on Signup**
 Following the fix of the previous 500 error, another issue arose when a site user attempted to signup. As emails were implemented late in development, after the previous server errors had arisen, it had been impossible to test if the emails were working beforehand. With a DEVELOPMENT variable added to Heroku's config vars, it was discovered that an account was being created, but that the emails were not being sent. Upon further review, this came down to a spelling error in the EMAIL_HOST in settings.py that said stmp, not smtp. With this fixed, the changes pushed, and the DEVELOPMENT variable removed from Heroku, emails were tested once more and now work as intended, both in the signup, and in the confirmation of orders.
@@ -401,7 +401,7 @@ Following the fix of the previous 500 error, another issue arose when a site use
 ## Bugs Unable To Fix
 
 - **Product Page Pagination** -
-During the later stages of development, it was suggested pagination was implemented into the products page. This was done using the Paginator import in the products view. However, once implemented, this first threw up **UnorderedObjectListWarning: Pagination may yeild inconsistent results with an unordered object_list**. To counter this, the products object was set to order by the pk value, which stopped the error from appearing. However a bigger issue arose in that the page would no longer view properly, and would show raw code instead. Upon inspection it appeared the whole page had been placed in a "pre" block, which showed no errors in the terminal, or Chrome's DevTools. As this was a complementary feature implemented late into the project, it was decided that it would be removed for the time being. The code from the products views.py file can be viewed below:
+During the later stages of development, it was suggested pagination was implemented into the products page. This was done using the Paginator import in the products view. However, once implemented, this first threw up **UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list**. To counter this, the products object was set to order by the pk value, which stopped the error from appearing. However a bigger issue arose in that the page would no longer view properly, and would show raw code instead. Upon inspection it appeared the whole page had been placed in a "pre" block, which showed no errors in the terminal, or Chrome's DevTools. As this was a complementary feature implemented late into the project, it was decided that it would be removed for the time being. The code from the products views.py file can be viewed below:
 
 ```
 from django.core.paginator import Paginator
@@ -436,8 +436,9 @@ This project was tested on all major web browsers to ensure it works as it is in
 
 |                   |  Safari |  Chrome |  Firefox |  Edge |  Opera |
 | :---------------  | :------ |:------- |:-------- |:----- |:------ |
-| Is it Compatable? |  Yes    |  Yes    |  Yes     |  Yes  |  Yes   |
+| Is it Compatible? |  Yes    |  Yes    |  Yes     |  Yes  |  Yes   |
 | Is it Responsive? |  Yes    |  Yes    |  Yes     |  Yes  |  Yes   |
+
 
 ## Responsive Design
 
@@ -495,8 +496,6 @@ The same tests were conducted on different desktop screen sizes. The results can
 
 
 ## Validator Tests
-
-### W3 HTML Validator 
 
 ### W3 HTML Validator 
 
@@ -613,11 +612,11 @@ The [W3C Markup Validation](https://validator.w3.org/) was used to ensure HTML m
 
 - 233	.free-quote-button	Value Error : font-size only 0 can be a unit. You must put a unit after your number : 300
 
-   To fix: deleted the unncessary value
+   To fix: deleted the unnecessary value
 
 - 239	.free-quote-button:hover, .free-quote-button:active, .free-quote-button:focus	Value Error : font-size only 0 can be a unit. You must put a unit after your number : 400
 
-   To fix: deleted the unncessary value
+   To fix: deleted the unnecessary value
 
 - 353	.allauth-form-inner-content input	only 0 can be a unit. You must put a unit after your number : 5
 
@@ -678,16 +677,20 @@ The [W3C Markup Validation](https://validator.w3.org/) was used to ensure HTML m
 
 **RobertClarkDesign**
 
-- Settings.py
+- `Settings.py`
 
-E501	150	80	line too long (91 > 79 characters)
-E501	153	80	line too long (81 > 79 characters)
-E501	156	80	line too long (82 > 79 characters)
-E501	159	80	line too long (83 > 79 characters)
+   E501	150	80	line too long (91 > 79 characters)
+   E501	153	80	line too long (81 > 79 characters)
+   E501	156	80	line too long (82 > 79 characters)
+   E501	159	80	line too long (83 > 79 characters)
 
-- manage.py
+   To fix: all but the first line were broken down line to fit under 79 characters. The first was too long even when broken down so it has been left as is.
 
-E501	9	80	line too long (81 > 79 characters)
+- `manage.py`
+
+   E501	9	80	line too long (81 > 79 characters)
+
+   To fix: broke down line to fit under 79 characters
 
 **About**
 
@@ -695,22 +698,26 @@ E501	9	80	line too long (81 > 79 characters)
 
 **Bag**
 
-- views.py
+- `views.py`
 
-E501	1	80	line too long (87 > 79 characters)
+   E501	1	80	line too long (87 > 79 characters)
+
+   To fix: broke down import line to fit under 79 characters
 
 **Checkout**
 
-- webhook_handler.py
+- `webhook_handler.py`
 
-E131	113	25	continuation line unaligned for hanging indent
-E131	151	21	continuation line unaligned for hanging indent
+   E131	113	25	continuation line unaligned for hanging indent
+   E131	151	21	continuation line unaligned for hanging indent
 
-These issues did not appear as errors on the actual file, and when fixed to match the PEP8online requirements, they came up as errors on the file, so they have been left as they are on here.
+   To fix: These issues did not appear as errors on the actual file, and when fixed to match the PEP8online requirements, they came up as errors on the file, so they have been left as they are on here.
 
-- webhooks.py
+- `webhooks.py`
 
-E501	43	80	line too long (86 > 79 characters)
+   E501	43	80	line too long (86 > 79 characters)
+
+   To fix: broke down import line to fit under 79 characters
 
 **Contact**
 
@@ -730,20 +737,29 @@ E501	43	80	line too long (86 > 79 characters)
 
 **Products**
 
-- forms.py
+- `forms.py`
 
-E303	7	1	too many blank lines (3)
+   E303	7	1	too many blank lines (3)
 
-- widgets.py
+   To fix: removed additional line
 
-E501	9	80	line too long (87 > 79 characters)
-W292	9	88	no newline at end of file
+- `widgets.py`
+
+   E501	9	80	line too long (87 > 79 characters)
+
+   To fix: as this is a template name and cannot be broken down, it has been left as is.
+
+   W292	9	88	no newline at end of file
+
+   To fix: added additional line
 
 **Profiles**
 
-- forms.py
+- `forms.py`
 
-W391	47	1	blank line at end of file
+   W391	47	1	blank line at end of file
+
+   To fix: removed additional line
 
 **Testimonials**
 
@@ -752,7 +768,7 @@ W391	47	1	blank line at end of file
 
 ## User Review
 
-Prior to the project's submission, the site was tested out by a group of individuals. The project recieved very positive feedback, with the only issues raised being minimal or preferential. One user noted that the signup email recieved stated **"example.com"** as the name of the site. This was part of the allauth email template, and was corrected to state **Robert Clark Design** instead.
+Prior to the project's submission, the site was tested out by a group of individuals. The project received very positive feedback, with the only issues raised being minimal or preferential. One user noted that the signup email received stated **`"example.com"`** as the name of the site. This was part of the allauth email template, and was corrected to state **Robert Clark Design** instead.
 
 ## Meeting Project Needs
 
@@ -817,7 +833,7 @@ This project was deployed to Heroku via the following steps:
 
 8. Select your Github user and enter the name of your repo, then select it from the search and click **Connect**.
 
-9. Ensure your **settings.py** file is set to:
+9. Ensure your **`settings.py`** file is set to:
    ```
    if 'DATABASE_URL' in os.environ:
       DATABASES = {
@@ -840,11 +856,11 @@ This project was deployed to Heroku via the following steps:
    * **portfolio**
    * **testimonials**
 
-12. Create a new superuser using `python3 manage.py createsuperuser` and entering a email, username and password.
+12. Create a new superuser using `python3 manage.py createsuperuser` and entering an email, username and password.
 
-13. Ensure **settings.py** has `ALLOWED_HOSTS = ['robertclarkdesign.herokuapp.com', 'localhost']`
+13. Ensure **`settings.py`** has `ALLOWED_HOSTS = ['robertclarkdesign.herokuapp.com', 'localhost']`
 
-14. In **Stripe** add the Heroku app checkout URL as the new webhook and update **settings.py** with new Stripe environment variables and email settings.
+14. In **Stripe** add the Heroku app checkout URL as the new webhook and update **`settings.py`** with new Stripe environment variables and email settings.
 
 15. Add, commit and push all changed to Heroku.
 
@@ -872,9 +888,9 @@ This project was deployed to Heroku via the following steps:
 
 18. With `pip3 install` install **boto3** and **django.storages** and freeze with `pip3 freeze --local > requirements.txt`
 
-19. Add **storages** to the list of **INSTALLED_APPS** in **settings.py**
+19. Add **storages** to the list of **INSTALLED_APPS** in **`settings.py`**
 
-20. Ensure the **settings.py** file has the following:
+20. Ensure the **`settings.py`** file has the following:
    ```
    if 'USE_AWS' in os.environ:
       # Cache Control
@@ -902,7 +918,7 @@ This project was deployed to Heroku via the following steps:
 
    ```
 
-21. Ensure the **custom_storages.py** file has the following:
+21. Ensure the **`custom_storages.py`** file has the following:
    ```
    from django.conf import settings
    from storages.backends.s3boto3 import S3Boto3Storage
@@ -935,7 +951,7 @@ This guide assumes you are using Gitpod:
 
 * Alternatively, you can open up your repository and use the following command to clone this project. `git clone https://github.com/Robert-Clark-1990/MS4_RCD.git`
 
-4. Create an **env.py** file and add to the **.gitignore** file, and add the following to the **env.py** file:
+4. Create an **`env.py`** file and add to the **.gitignore** file, and add the following to the **`env.py`** file:
 
    * import os
    * os.enivron["DEVELOPMENT"] = "True"
@@ -954,7 +970,7 @@ This guide assumes you are using Gitpod:
    * **portfolio**
    * **testimonials**
 
-8. Create a new superuser using `python3 manage.py createsuperuser` and entering a email, username and password.
+8. Create a new superuser using `python3 manage.py createsuperuser` and entering an email, username and password.
 
 9. Run the app in your browser by inputting the following command: `python3 manage.py runserver`
 
@@ -999,3 +1015,5 @@ This guide assumes you are using Gitpod:
 - Thanks to the **Code Institute tutors** who were there in times of crisis to help guide this developer in the right direction.
 
 - Special thanks to tutor **Igor CI** for his help on all the projects worked on during the course.
+
+- Thanks to the people who helped to test the site and ensure all issues were discovered before submission.
