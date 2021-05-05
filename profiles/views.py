@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile, ImageUpload
 from. forms import UserProfileForm, ImageUploadForm
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 @login_required
 def profile(request):

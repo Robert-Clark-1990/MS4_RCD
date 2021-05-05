@@ -3,6 +3,8 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 def bag_contents(request):
 

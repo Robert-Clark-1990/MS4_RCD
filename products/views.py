@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from .models import Product, Category
 from .forms import ProductForm
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """

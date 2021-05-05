@@ -5,6 +5,8 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 class UserProfile(models.Model):
     """

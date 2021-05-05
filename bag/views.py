@@ -3,6 +3,8 @@ from django.shortcuts import HttpResponse
 from products.models import Product
 from django.contrib import messages
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 def view_bag(request):
     """A view to return the shopping bag and its contents"""

@@ -7,6 +7,8 @@ from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 @require_POST
 @csrf_exempt

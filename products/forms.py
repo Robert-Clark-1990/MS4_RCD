@@ -2,6 +2,8 @@ from django import forms
 from .models import Product, Category
 from .widgets import CustomClearableFileInput
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 class ProductForm(forms.ModelForm):
 

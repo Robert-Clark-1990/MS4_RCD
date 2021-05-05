@@ -8,6 +8,8 @@ from profiles.models import UserProfile
 
 import uuid
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)

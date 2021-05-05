@@ -11,6 +11,8 @@ from profiles.models import UserProfile
 import json
 import time
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 class StripeWH_Handler:
     """

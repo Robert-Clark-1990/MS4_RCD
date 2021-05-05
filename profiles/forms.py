@@ -1,6 +1,8 @@
 from django import forms
 from .models import UserProfile, ImageUpload
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 class UserProfileForm(forms.ModelForm):
     class Meta:

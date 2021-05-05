@@ -16,6 +16,8 @@ from .models import Order, OrderLineItem
 import stripe
 import json
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 @require_POST
 def cache_checkout_data(request):

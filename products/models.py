@@ -1,5 +1,7 @@
 from django.db import models
 
+# format credit to Code Institute Boutique Ado project and changed accordingly
+
 
 class Category(models.Model):
 
