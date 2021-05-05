@@ -30,6 +30,7 @@
     - [Browser Compatibility](#browser-compatibility)
     - [Responsive Design](#responsive-design)
     - [Validator Tests](#validator-tests)
+    - [User Review](#user-review)
     - [Meeting Project Needs](#meeting-project-needs)
 
  - [**Deployment**](#deployment)
@@ -80,7 +81,6 @@ into a portfolio of my work and a place where I can sell my design and developme
 | Site Owner   | Showcase a portfolio of work which can be changed or removed through the site                   |
 | Site Owner   | Showcase testimonials from previous customers which can be added to or removed through the site |
 | Site Owner   | Display an about the designer section to humanise the work and encourage users to commit        |
-| Site Owner   | Invite customers to write a testimonial upon project completion to display on the site          |
 | Site Owner   | Add, edit, view and delete items in the shop all through the site                               |
 
 
@@ -448,9 +448,7 @@ Using Google Chrome's Dev Tools, this project was tested to ensure it was optimi
 | 404               | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
 | 500               | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
 | About             | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
-| About             | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
 | Bag               | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
-| About             | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
 | Checkout          | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
 | Checkout Success  | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
 | Contact           | Yes     | Yes       | Yes     | Yes        | Yes         | Yes          | Yes               | Yes      | Yes  | Yes      | Yes         | Yes         |
@@ -476,9 +474,7 @@ The same tests were conducted on different desktop screen sizes. The results can
 | 404               | Yes    | Yes    | Yes     | Yes     |
 | 500               | Yes    | Yes    | Yes     | Yes     |
 | About             | Yes    | Yes    | Yes     | Yes     |
-| About             | Yes    | Yes    | Yes     | Yes     |
 | Bag               | Yes    | Yes    | Yes     | Yes     |
-| About             | Yes    | Yes    | Yes     | Yes     |
 | Checkout          | Yes    | Yes    | Yes     | Yes     |
 | Checkout Success  | Yes    | Yes    | Yes     | Yes     |
 | Contact           | Yes    | Yes    | Yes     | Yes     |
@@ -497,17 +493,294 @@ The same tests were conducted on different desktop screen sizes. The results can
 | Testimonials      | Yes    | Yes    | Yes     | Yes     |
 | Add/Edit Ttml     | Yes    | Yes    | Yes     | Yes     |
 
+
 ## Validator Tests
 
 ### W3 HTML Validator 
 
+### W3 HTML Validator 
+
+The [W3C Markup Validation](https://validator.w3.org/) was used to ensure HTML met the necessary standards.
+
+**Please note: each page threw up errors regarding the use of templating, which were an integral part of this project, and therefore were not addressed.**
+
+**Base** 
+
+- Validator confirmed no errors or warnings to show.
+
+**404**
+
+- Validator confirmed no errors or warnings to show.
+
+**500**
+
+- Validator confirmed no errors or warnings to show.
+
+**About**
+
+- Error: Element div not allowed as child of element ul in this context. (Suppressing further errors from this subtree.) From line 167, column 21; to line 167, column 45
+
+   `<div style="clear:both;"></div>`
+
+   To fix: Deleted div.
+
+**Bag**
+
+*Checked all elements of Bag*
+
+- Validator confirmed no errors or warnings to show.
+
+**Checkout** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Checkout Success**
+
+- Validator confirmed no errors or warnings to show.
+
+**Contact**
+
+- Validator confirmed no errors or warnings to show.
+
+**Email Success**
+
+- Validator confirmed no errors or warnings to show.
+
+**Home** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Management** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Order History** 
+
+- Validator confirmed no errors or warnings to show.
+
+**View Uploads**
+
+- Validator confirmed no errors or warnings to show.
+
+**Portfolio**
+
+- Validator confirmed no errors or warnings to show.
+
+**Project Detail**
+
+- Validator confirmed no errors or warnings to show.
+
+**Add/Edit Project** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Products** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Product Detail** 
+
+- Error: Element img is missing required attribute src. From line 50, column 17; to line 50, column 54
+
+ `<img class="modal-content" id="img01">` 
+
+ To fix: As this was a modal and loaded based on the project page, including an src caused the image to malfunction when attempting to fix. Therefore it was left as it is.
+
+**Add/Edit Product** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Profile** 
+
+*Checked all elements of Profile*
+
+- Validator confirmed no errors or warnings to show.
+
+**Testimonials** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Add/Edit Testimonials**
+
+- Validator confirmed no errors or warnings to show.
+
+
 ### Jigsaw CSS Validator
+
+[Jigsaw](https://jigsaw.w3.org/css-validator/) was used to validate CSS code used in the project.
+
+**Base** 
+
+- 233	.free-quote-button	Value Error : font-size only 0 can be a unit. You must put a unit after your number : 300
+
+   To fix: deleted the unncessary value
+
+- 239	.free-quote-button:hover, .free-quote-button:active, .free-quote-button:focus	Value Error : font-size only 0 can be a unit. You must put a unit after your number : 400
+
+   To fix: deleted the unncessary value
+
+- 353	.allauth-form-inner-content input	only 0 can be a unit. You must put a unit after your number : 5
+
+   To fix: added px to end of 5
+
+**About** 
+
+- Validator confirmed Document checking completed. No errors or warnings to show.
+
+**Checkout** 
+
+- Validator confirmed Document checking completed. No errors or warnings to show.
+
+**Home** 
+
+- Validator confirmed Document checking completed. No errors or warnings to show.
+
+**Products** 
+
+- Validator confirmed Document checking completed. No errors or warnings to show.
+
+**Profiles** 
+
+- Validator confirmed Document checking completed. No errors or warnings to show.
+
 
 ### JSHint JS Validator
 
+[JS Hint](https://jshint.com/) was used to validate JavaScript code used in the project.
+
+**Checkout** 
+
+- 112	Missing semicolon.
+
+   To fix: added semicolon.
+
+**Home** 
+
+- Validator confirmed no errors or warnings to show.
+
+**Products** 
+
+- 14	Missing semicolon.
+- 19	Missing semicolon.
+
+   To fix: added semicolons.
+
+**Profiles** 
+
+- 4   Unnecessary semicolon.
+
+   To fix: removed semicolon.
+
+
 ### PEP8 Python Validator 
 
+[PEP8](http://pep8online.com/) was used to validated Python code used in this project.
+
+**RobertClarkDesign**
+
+- Settings.py
+
+E501	150	80	line too long (91 > 79 characters)
+E501	153	80	line too long (81 > 79 characters)
+E501	156	80	line too long (82 > 79 characters)
+E501	159	80	line too long (83 > 79 characters)
+
+- manage.py
+
+E501	9	80	line too long (81 > 79 characters)
+
+**About**
+
+- Validator confirmed All right
+
+**Bag**
+
+- views.py
+
+E501	1	80	line too long (87 > 79 characters)
+
+**Checkout**
+
+- webhook_handler.py
+
+E131	113	25	continuation line unaligned for hanging indent
+E131	151	21	continuation line unaligned for hanging indent
+
+These issues did not appear as errors on the actual file, and when fixed to match the PEP8online requirements, they came up as errors on the file, so they have been left as they are on here.
+
+- webhooks.py
+
+E501	43	80	line too long (86 > 79 characters)
+
+**Contact**
+
+- Validator confirmed All right
+
+**Home**
+
+- Validator confirmed All right
+
+**Management**
+
+- Validator confirmed All right
+
+**Portfolio**
+
+- Validator confirmed All right
+
+**Products**
+
+- forms.py
+
+E303	7	1	too many blank lines (3)
+
+- widgets.py
+
+E501	9	80	line too long (87 > 79 characters)
+W292	9	88	no newline at end of file
+
+**Profiles**
+
+- forms.py
+
+W391	47	1	blank line at end of file
+
+**Testimonials**
+
+- Validator confirmed All right
+
+
+## User Review
+
+Prior to the project's submission, the site was tested out by a group of individuals. The project recieved very positive feedback, with the only issues raised being minimal or preferential. One user noted that the signup email recieved stated **"example.com"** as the name of the site. This was part of the allauth email template, and was corrected to state **Robert Clark Design** instead.
+
 ## Meeting Project Needs
+
+**As a Site User I want to:**
+
+1. Quickly and easily understand the purpose of the site
+2. View a list of products & services available
+3. View individual products & services
+4. Sort for products & services that fit my requirements   
+5. Select products & services I want and add them to my basket 
+6. Easily view the total cost of my purchases at any time  
+7. Add additional information to inform designer on project requirements 
+8. Easily locate an inbuilt contact form to request quotes on unique projects 
+9. Pay for services via an inbuilt payment service
+10. Sign in as a customer to view order history and upload commission images 
+
+With its simplistic and straightforward design, the website easily portrays to the user what its purpose is. Users are able to easily access information about the site owner, his previous projects, testimonials from other customers, and a storefront full of products and services. Thanks to the implementation of Stripe payments, the user can purchase products or services, and are encouraged to create an account, thus giving them access to their order history, and a dedicated image upload platform. Therefore, this project meets all of the site user stories.
+
+**As a Site Owner I want to:**
+
+1. Log in as a special user and view a list of all orders and uploaded images
+2. Handle the customer request and upload of images all through the site
+3. Showcase a portfolio of work which can be changed or removed through the site
+4. Showcase testimonials from previous customers which can be added to or removed through the site
+5. Display an about the designer section to humanise the work and encourage users to commit
+6. Add, edit, view and delete items in the shop all through the site
+
+The site owner can access a dedicated Admin Management page, which gives them access to CRUD functionality for each of the site's elements. They are able to view uploaded images, and download them for use in commission pieces. They are also able to view a full history of all orders. Therefore, this project meets all of the site owner stories.
 
 ---
 
