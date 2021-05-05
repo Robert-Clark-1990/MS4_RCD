@@ -115,13 +115,119 @@ A strong focus on geometric design was used throughout the site, showcasing the 
 
 ## Database Design
 
-`<-- TO FINISH ONCE IMAGE UPLOAD BIT SORTED SO I KNOW WHAT IS IN THE SCHEMA -->`
-
 All data related to this project is saved in JSON files across three apps. The Portfolio app is separated from the rest as it contains data from previous works, and would only be updated with new information if a new client was taken on. The Products app contains JSON files for Products and Categories. Users who purchase a commission package will then be invited to leave a testimonial, which will bring forward data to be used in the Testimonials app.
 The model below was created using [Draw SQL](https://drawsql.app/rob-clark/diagrams/rcd)
 
 ![Database Schema](documents/images/database-schema.png)
 
+Across the project, a collection of Models were created to work with these JSON files and other information created and implemented throughout the site. These models can be viewed below:
+
+
+### Checkout App
+
+#### Order Model
+
+| Name                     | Key             | Type                 | Validation                                                                          |
+| ------------------------ | --------------- | -------------------- | ----------------------------------------------------------------------------------- |
+| Order Number             | order_number    | models.CharField     | max_length=32, null=False, editable=False                                           |
+| User Profile             | user_profile    | models.ForeignKey    | UserProfile, on_delete=models.SET_NULL, null=True, blank=True,related_name='orders' |
+| Full Name                | full_name       | models.CharField     | max_length=70, null=False, blank=False                                              |
+| Email                    | email           | models.EmailField    | max_length=254, null=False, blank=False                                             |
+| Phone Number             | phone_number    | models.CharField     | max_length=20, null=False, blank=False                                              |
+| Country                  | country         | CountryField         | blank_label='Country *', null=False, blank=False                                    |
+| Postcode                 | postcode        | models.CharField     | max_length=20, null=True, blank=True                                                |
+| Town or City             | town_or_city    | models.CharField     | max_length=40, null=False, blank=False                                              |
+| Street Address 1         | street_address1 | models.CharField     | max_length=100, null=False, blank=False                                             |
+| Street Address 2         | street_address2 | models.CharField     | max_length=100, null=True, blank=True                                               |
+| County                   | county          | models.CharField     | max_length=80, null=True, blank=True                                                |
+| Date                     | date            | models.DateTimeField | auto_now_add=True                                                                   |
+| Delivery Cost            | delivery_cost   | models.DecimalField  | max_digits=6, decimal_places=2, null=False, default=0                               |
+| Order Total              | order_total     | models.DecimalField  | max_digits=10, decimal_places=2, null=False, default=0                              |
+| Grand Total              | grand_total     | models.DecimalField  | max_digits=10, decimal_places=2, null=False, default=0                              |
+| Original Bag             | original_bag    | models.TextField     | null=False, blank=False, default=''                                                 |
+| Stripe Payment Intent ID | stripe_pid      | models.CharField     | max_length=254, null=False, blank=False, default=''                                 |
+
+#### OrderLineItem Model
+
+| Name            | Key             | Type                 | Validation                                                                          |
+| --------------- | --------------- | -------------------- | ----------------------------------------------------------------------------------- |
+| Order           | order           | models.ForiegnKey    | Order, null=False, blank=False, on_delete=models CASCADE, related_name='lineitems'  |
+| Product         | product         | models.ForeignKey    | Product, null=False, blank=False, on_delete=models.CASCADE                          |
+| Quantity        | quantity        | models.IntegerField  | null=False, blank=False, default=0                                                  |
+| Line Item Total | lineitem_total  | models.DecimalField  | max_digits=6, decimal_places=2, null=False, blank=False, editable=False             |
+
+
+### Portfolio App
+
+#### Project Model
+
+| Name            | Key        | Type                | Validation                             |
+| --------------- | ---------- | ------------------- | -------------------------------------- |
+| SKU             | sku        | models.TextField    |                                        |
+| Name            | name       | models.TextField    |                                        |
+| Paragraph 1     | para_1     | models.TextField    |                                        |
+| Paragraph 2     | para_2     | models.TextField    | null=True, blank=True                  |
+| Paragraph 3     | para_3     | models.TextField    | null=True, blank=True                  |
+| Keywords        | keywords   | models.TextField    |                                        |
+| Link            | link       | models.URLField     | max_length=1024, null=True, blank=True |
+| Image           | image      | models.ImageField   | null=True, blank=True                  |
+
+
+### Products App
+
+#### Product Model
+
+| Name                 | Key         | Type                 | Validation                                       |
+| -------------------- | ----------- | -------------------- | ------------------------------------------------ |
+| Category             | category    | models.ForeignKey    | 'Category', null=True, on_delete=models.SET_NULL |
+| SKU                  | sku         | models.CharField     | max_length=254, null=True, blank=True            |
+| Name                 | name        | models.CharField     | max_length=254                                   |
+| Description          | description | models.TextField     |                                                  |
+| Terms and Conditions | t_and_c     | models.TextField     | null=True, blank=True                            |
+| Price                | price       | models.DecimalField  | max_digits=6, decimal_places=2                   |
+| Digital              | is_digital  | models.BooleanField  | default=False, null=True, blank=True             |
+| Image Url            | image_url   | models.URLField      | max_length=1024, null=True, blank=True           |
+| Image                | image       | models.ImageField    | null=True, blank=True                            |
+
+
+### Profile App
+
+#### UserProfile Model
+
+| Name             | Key                  | Type                 | Validation                                    |
+| ---------------- | -------------------- | -------------------- | --------------------------------------------- |
+| User             | user                 | OneToOneField 'User' | on_delete=models.CASCADE                      |
+| Phone Number     | default_phone_number | models.CharField     | max_length=20, null=True, blank=True          |
+| Street Address 1 | street_address1      | models.CharField     | max_length=80, null=True, blank=True          |
+| Street Address 2 | street_address2      | models.CharField     | max_length=80, null=True, blank=True          |
+| Town or City     | default_town_or_city | models.CharField     | max_length=40, null=True, blank=True          |
+| County           | default_county       | models.CharField     | max_length=80, null=True, blank=True          |
+| Postcode         | default_postcode     | models.CharField     | max_length=20, null=True, blank=True          |
+| Country          | default_country      | CountryField         | blank_label='Country', null=True, blank=True  |
+
+#### ImageUpload Model
+
+| Name             | Key                    | Type                 | Validation                              |
+| ---------------- | ---------------------- | -------------------- | --------------------------------------- |
+| User             | user                   | models.CharField     | max_length=254, null=False, blank=True  |
+| Title            | title                  | models.CharField     | max_length=254                          |
+| Image            | image                  | models.ImageField    | upload_to='user_images'                 |
+| Image File Path  | upload_image_file_path | models.CharField     | max_length=254, default="not found"     |
+| Comments         | comments               | models.TextField     |                                         |
+
+
+### Testimonials App
+
+#### Testimonials Model
+
+| Name      | Key     | Type               | Validation                |
+| --------- | ------- | ------------------ | ------------------------- |
+| SKU       | sku     | models.CharField   | max_length=254            |
+| Name      | name    | models.CharField   | max_length=254            |
+| Review    | review  | models.TextField   |                           |
+| Image     | image   | models.ImageField  | null=True, blank=True     |
+
+   
 ---
 
 # Features
